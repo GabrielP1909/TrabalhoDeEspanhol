@@ -1,0 +1,191 @@
+/* Estilos específicos para a página de Turismo */
+
+.turismo-intro {
+    padding: 140px 0 80px;
+    background: var(--gradient-primary);
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.turismo-intro h2 {
+    color: white;
+    font-size: 4em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.turismo-intro p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.5em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.turismo-content {
+    padding: 80px 0;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    background-color: var(--section-bg); /* Usar variável */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    transition: background-color 0.3s ease; /* Transição para modo claro/escuro */
+}
+
+.turismo-content h3 {
+    color: var(--primary-color);
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 3em;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 15px;
+}
+
+.turismo-content p {
+    font-size: 1.15em;
+    color: var(--light-text-color); /* Usar variável */
+    margin-bottom: 25px;
+}
+
+/* Destination List */
+.destination-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px; /* Mais espaçamento */
+}
+
+.destination-list li {
+    background-color: var(--body-bg); /* Usar variável */
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px; /* Mais espaçamento */
+    padding: 20px 30px; /* Mais padding */
+    border-radius: 8px;
+    font-size: 1.2em; /* Maior */
+    color: var(--text-color); /* Usar variável */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s ease; /* Transição para modo claro/escuro */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.destination-list li:hover {
+    background-color: #eef2f5; /* Manter um tom claro para hover */
+    transform: translateX(8px); /* Mais deslocamento */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Ajuste para dark mode no hover */
+body.dark-mode .destination-list li:hover {
+    background-color: #5a5a5a; /* Tom mais escuro para hover no dark mode */
+}
+
+.destination-list li strong {
+    color: var(--primary-color);
+    margin-right: 10px; /* Mais espaçamento */
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards maiores */
+    gap: 30px; /* Mais espaçamento */
+    margin-top: 40px;
+    padding: 20px; /* Mais padding */
+    justify-items: center;
+    align-items: center;
+    background-color: var(--body-bg); /* Usar variável */
+    border-radius: 10px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.05); /* Sombra interna */
+    transition: background-color 0.3s ease; /* Transição para modo claro/escuro */
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Altura maior */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px var(--shadow-light); /* Sombra mais forte */
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid var(--section-bg); /* Borda branca para destacar */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Mais zoom */
+    box-shadow: 0 10px 25px var(--shadow-medium);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    filter: brightness(0.6); /* Mais escuro */
+    transform: scale(1.02); /* Leve zoom na imagem */
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Mais opaco */
+    color: white;
+    padding: 15px; /* Mais padding */
+    font-size: 1.2em; /* Maior */
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    font-weight: 600;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+/* Estilos para Galeria 360 */
+.gallery-360 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.gallery-360 .viewer-container {
+    width: 100%;
+    height: 400px; /* Altura do visualizador 360 */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: var(--light-text-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .turismo-intro h2 {
+        font-size: 3.2em;
+    }
+    .turismo-intro p {
+        font-size: 1.2em;
+    }
+    .turismo-content h3 {
+        font-size: 2.5em;
+    }
+    .destination-list li {
+        font-size: 1.1em;
+        padding: 18px 25px;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}

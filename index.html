@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra o Peru: história, cultura, gastronomia e turismo.">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Descubra o Peru</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">Peru Explorer</a>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="turismo.html">Turismo</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <!-- Vídeo de fundo -->
+        <video autoplay muted loop class="hero-video">
+            <source src="video/machu_picchu_video.mp4" type="video/mp4">
+            <!-- Adicione outros formatos de vídeo para compatibilidade -->
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="hero-overlay"></div> <!-- Overlay escuro -->
+        <div class="hero-content">
+            <h1>Descubra o Peru</h1>
+            <p>Um país rico em história, cultura e belezas naturais.</p>
+            <a href="sobre.html" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section class="highlights scroll-reveal">
+        <div class="container">
+            <h2>Explore o Peru</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="img/cultura_card.jpg" alt="Cultura Peruana">
+                    <h3>Cultura Vibrante</h3>
+                    <p>Mergulhe nos festivais, músicas e danças que contam a história de um povo.</p>
+                    <a href="cultura.html" class="btn-card">Ver Cultura</a>
+                </div>
+                <div class="card">
+                    <img src="img/turismo_card.jpg" alt="Turismo no Peru">
+                    <h3>Destinos Incríveis</h3>
+                    <p>De Machu Picchu às Linhas de Nazca, o Peru oferece paisagens inesquecíveis.</p>
+                    <a href="turismo.html" class="btn-card">Ver Turismo</a>
+                </div>
+                <div class="card">
+                    <img src="img/economia_card.jpg" alt="Economia Peruana">
+                    <h3>Economia e Curiosidades</h3>
+                    <p>Conheça os setores que movem o país e fatos fascinantes sobre o Peru.</p>
+                    <a href="economia.html" class="btn-card">Ver Economia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Peru Explorer. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><img src="img/icon_facebook.png" alt="Facebook"></a>
+                <a href="#" aria-label="Instagram"><img src="img/icon_instagram.png" alt="Instagram"></a>
+                <a href="#" aria-label="Twitter"><img src="img/icon_twitter.png" alt="Twitter"></a>
+            </div>
+            <!-- Placeholder para feed do Instagram -->
+            <div class="instagram-feed">
+                <h4>#VisitPeru no Instagram</h4>
+                <p>Integração com feed do Instagram aqui (requer API ou widget).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botões de Acessibilidade e Modo -->
+    <div class="accessibility-controls">
+        <button id="dark-mode-toggle" class="accessibility-btn" title="Alternar Modo Claro/Escuro">💡</button>
+        <button id="increase-font-btn" class="accessibility-btn" title="Aumentar/Reduzir Fonte">A+</button>
+        <button id="high-contrast-btn" class="accessibility-btn" title="Alternar Alto Contraste"> kontrast</button>
+        <button id="music-toggle-btn" class="accessibility-btn" title="Tocar/Parar Música">🎵</button>
+    </div>
+
+    <!-- Música de fundo opcional -->
+    <audio id="background-music" loop>
+        <source src="audio/peruvian_flute.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

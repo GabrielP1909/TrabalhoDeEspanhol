@@ -1,0 +1,498 @@
+/* Importar uma fonte do Google Fonts para uma estética mais moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap'); /* Adicionada Merriweather para títulos temáticos */
+
+:root {
+    /* Cores inspiradas no Peru */
+    --primary-color: #D92027; /* Vermelho vibrante da bandeira e cultura */
+    --secondary-color: #28a745; /* Verde para botões de ação (mantido para contraste, pode ser ajustado) */
+    --accent-color: #FFD700; /* Dourado/Amarelo, remetendo ao ouro Inca */
+    --dark-text: #343a40; /* Texto escuro principal */
+    --light-text: #6c757d; /* Texto secundário/parágrafos */
+    --background-light: #f8f9fa; /* Fundo claro */
+    --background-white: #ffffff; /* Fundo branco */
+    --border-color: #e9ecef; /* Cor de borda suave */
+    --shadow-light: rgba(0, 0, 0, 0.1); /* Sombra mais definida */
+    --shadow-medium: rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    --gradient-primary: linear-gradient(45deg, #D92027, #FF4B5C); /* Gradiente de vermelho */
+    --gradient-secondary: linear-gradient(45deg, #FFD700, #FFC107); /* Gradiente de dourado */
+    --gradient-button-hover: linear-gradient(45deg, #D92027, #FFD700); /* Gradiente para hover de botão */
+
+    /* Variáveis para Modo Claro/Escuro */
+    --body-bg: var(--background-light);
+    --section-bg: var(--background-white);
+    --text-color: var(--dark-text);
+    --light-text-color: var(--light-text);
+    --navbar-bg: rgba(255, 255, 255, 0.98);
+    --card-bg: var(--background-white);
+    --card-border: var(--border-color);
+    --footer-bg: var(--dark-text);
+    --footer-text: white;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+    --body-bg: #2c2c2c;
+    --section-bg: #3a3a3a;
+    --text-color: #f0f0f0;
+    --light-text-color: #cccccc;
+    --navbar-bg: rgba(44, 44, 44, 0.98);
+    --card-bg: #4a4a4a;
+    --card-border: #555555;
+    --footer-bg: #1a1a1a;
+    --footer-text: #f0f0f0;
+    --shadow-light: rgba(255, 255, 255, 0.08);
+    --shadow-medium: rgba(255, 255, 255, 0.15);
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--text-color); /* Usar variável */
+    background-color: var(--body-bg); /* Usar variável */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição para modo claro/escuro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif; /* Fonte temática para títulos */
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+h1 { font-size: 3.8em; } /* Aumentado para mais impacto */
+h2 { font-size: 3.2em; } /* Aumentado */
+h3 { font-size: 2.5em; } /* Aumentado */
+h4 { font-size: 2em; } /* Aumentado */
+p {
+    font-family: 'Open Sans', sans-serif; /* Manter legibilidade para texto corrido */
+    font-size: 1.15em; /* Levemente aumentado para legibilidade */
+    color: var(--light-text-color); /* Usar variável */
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #A01A20; /* Um tom mais escuro do vermelho primário */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 30px; /* Aumentado */
+    border-radius: 8px; /* Mais arredondado */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease; /* Adicionado box-shadow e background */
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em; /* Aumentado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para elevação */
+}
+
+.btn:hover {
+    background: var(--gradient-button-hover); /* Gradiente no hover */
+    transform: translateY(-3px); /* Mais elevação */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-card {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px; /* Aumentado */
+    border-radius: 6px; /* Mais arredondado */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em; /* Aumentado */
+}
+
+.btn-card:hover {
+    background-color: #1e7e34; /* Tom mais escuro do verde */
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: var(--navbar-bg); /* Usar variável */
+    box-shadow: 0 4px 15px var(--shadow-light); /* Sombra mais forte */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    padding: 15px 0; /* Mais padding */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em; /* Aumentado */
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #A01A20;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 35px; /* Mais espaçamento */
+}
+
+.navbar ul li a {
+    color: var(--text-color); /* Usar variável */
+    font-weight: 600;
+    padding: 8px 0; /* Mais padding */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Mais espesso */
+    background-color: var(--primary-color);
+    bottom: -8px; /* Mais abaixo */
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    width: 100%;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color); /* Cor do link ao passar o mouse */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay escuro */
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    max-width: 900px; /* Maior largura */
+    animation: fadeIn 1.5s ease-out; /* Animação de entrada */
+}
+
+.hero-content h1 {
+    font-size: 5em; /* Maior */
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.8); /* Sombra de texto personalizada */
+}
+
+.hero-content p {
+    font-size: 1.8em; /* Maior */
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* General Section Styling */
+section {
+    padding: 100px 0; /* Mais padding */
+    background-color: var(--section-bg); /* Usar variável */
+    margin-bottom: 40px; /* Mais espaçamento entre seções */
+    border-radius: 12px; /* Mais arredondado */
+    box-shadow: 0 8px 25px var(--shadow-light); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transição para modo claro/escuro */
+    position: relative; /* Para elementos culturais */
+    overflow: hidden; /* Para garantir que o background não vaze */
+}
+
+/* Elementos culturais - Padrões de fundo */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/peruvian_pattern.png'); /* Exemplo de padrão */
+    background-repeat: repeat;
+    opacity: 0.03; /* Levemente visível */
+    z-index: 0;
+    pointer-events: none; /* Não interfere com cliques */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 12px 30px var(--shadow-medium);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px; /* Mais espaçamento */
+    font-size: 3.5em;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+    z-index: 1; /* Para ficar acima do padrão */
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* Linha decorativa */
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+section h3 {
+    color: var(--text-color); /* Usar variável */
+    margin-top: 45px;
+    margin-bottom: 25px;
+    font-size: 2.8em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+    z-index: 1; /* Para ficar acima do padrão */
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg); /* Usar variável */
+    color: var(--footer-text); /* Usar variável */
+    padding: 50px 0; /* Mais padding */
+    text-align: center;
+    margin-top: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição para modo claro/escuro */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Mais espaçamento */
+}
+
+footer p {
+    margin: 0;
+    color: var(--footer-text); /* Usar variável */
+    font-size: 1em;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 12px; /* Mais espaçamento */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links img {
+    width: 32px; /* Maior */
+    height: 32px;
+    filter: invert(1); /* Para ícones brancos */
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1); /* Mais elevação e leve aumento */
+    filter: brightness(0.8); /* Leve escurecimento */
+}
+
+/* Botões de Acessibilidade e Modo */
+.accessibility-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accessibility-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accessibility-btn:hover {
+    background-color: #A01A20;
+    transform: scale(1.1);
+}
+
+/* Estilos para acessibilidade */
+body.large-font {
+    font-size: 1.15em;
+}
+
+body.high-contrast {
+    filter: contrast(1.5);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        display: none; /* Hidden by default, will be toggled by JS for mobile menu */
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.4em;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+
+    section h2 {
+        font-size: 2.8em;
+    }
+
+    section h3 {
+        font-size: 2.2em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    section h2 {
+        font-size: 2.2em;
+    }
+
+    section h3 {
+        font-size: 1.8em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
