@@ -8,18 +8,55 @@
     <title>Contato</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru Explorer</a>
+                <a href="index.html" class="logo">Peru</a>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
                     <li><a href="turismo.html">Turismo</a></li>
                     <li><a href="cultura.html">Cultura</a></li>
                     <li><a href="economia.html">Economia</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
+            </div>
+            <!-- Botão de Configurações e Menu -->
+            <div class="settings-container">
+                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <div id="settings-menu" class="settings-menu">
+                    <h4>Configurações</h4>
+                    <ul>
+                        <li>
+                            <span>Modo Noturno</span>
+                            <label class="switch">
+                                <input type="checkbox" id="dark-mode-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Aumentar Fonte</span>
+                            <label class="switch">
+                                <input type="checkbox" id="increase-font-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Alto Contraste</span>
+                            <label class="switch">
+                                <input type="checkbox" id="high-contrast-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Silenciar Sons</span>
+                            <label class="switch">
+                                <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -50,27 +87,25 @@
         </div>
     </section>
 
-    <footer>
+   <footer>
         <div class="container">
-            <p>&copy; 2023 Peru Explorer. Todos os direitos reservados.</p>
+            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="img/icon_facebook.png" alt="Facebook"></a>
-                <a href="#" aria-label="Instagram"><img src="img/icon_instagram.png" alt="Instagram"></a>
-                <a href="#" aria-label="Twitter"><img src="img/icon_twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitPeru no Instagram</h4>
-                <p>Integração com feed do Instagram aqui (requer API ou widget).</p>
+                <h4>#VisitEvoTech no Instagram</h4>
             </div>
         </div>
     </footer>
 
-    <!-- Botões de Acessibilidade e Modo -->
+    <!-- Botões de Acessibilidade e Modo (agora controlados pelo menu de configurações) -->
     <div class="accessibility-controls">
-        <button id="dark-mode-toggle" class="accessibility-btn" title="Alternar Modo Claro/Escuro">💡</button>
-        <button id="increase-font-btn" class="accessibility-btn" title="Aumentar/Reduzir Fonte">A+</button>
-        <button id="high-contrast-btn" class="accessibility-btn" title="Alternar Alto Contraste"> kontrast</button>
+        <!-- Este div pode ser removido se não houver mais botões aqui -->
     </div>
 
     <script src="js/main.js"></script>

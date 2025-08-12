@@ -4,94 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/economia.css">
-    <title>Economia e Curiosidades do Peru</title>
+    <link rel="stylesheet" href="css/cultura.css">
+    <title>Cultura do Peru</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru Explorer</a>
+                <a href="index.html" class="logo">Peru</a>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
                     <li><a href="turismo.html">Turismo</a></li>
                     <li><a href="cultura.html">Cultura</a></li>
                     <li><a href="economia.html">Economia</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
+            <!-- Botão de Configurações e Menu -->
+            <div class="settings-container">
+                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <div id="settings-menu" class="settings-menu">
+                    <h4>Configurações</h4>
+                    <ul>
+                        <li>
+                            <span>Modo Noturno</span>
+                            <label class="switch">
+                                <input type="checkbox" id="dark-mode-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Aumentar Fonte</span>
+                            <label class="switch">
+                                <input type="checkbox" id="increase-font-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Alto Contraste</span>
+                            <label class="switch">
+                                <input type="checkbox" id="high-contrast-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Silenciar Sons</span>
+                            <label class="switch">
+                                <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section class="economia-intro scroll-reveal">
+    <section class="cultura-intro scroll-reveal">
         <div class="container">
-            <h2>Economia do Peru: Crescimento e Diversidade</h2>
-            <p>A economia peruana tem demonstrado um crescimento robusto nas últimas décadas, impulsionada por seus vastos recursos naturais e uma crescente diversificação. Conheça os pilares que sustentam o desenvolvimento do país.</p>
+            <h2>Cultura Vibrante do Peru</h2>
+            <p>A cultura peruana é um mosaico fascinante de tradições ancestrais, influências coloniais e uma rica diversidade étnica. Mergulhe nos festivais coloridos, na música envolvente, nas danças expressivas e na culinária que é Patrimônio Cultural da Humanidade.</p>
         </div>
     </section>
 
-    <section class="economia-content scroll-reveal parallax-bg" data-parallax-speed="0.2" style="background-image: url('img/economia_bg.jpg'); background-size: cover; background-attachment: fixed;">
+    <section class="cultura-content scroll-reveal">
         <div class="container">
-            <h3>Setores Econômicos Chave</h3>
-            <p>Os principais motores da economia peruana incluem:</p>
-            <ul class="sector-list">
-                <li><strong>Mineração:</strong> O Peru é um dos maiores produtores mundiais de cobre, ouro, zinco e prata.</li>
-                <li><strong>Agricultura:</strong> Produção de café, quinoa, aspargos, frutas e vegetais, com destaque para produtos de exportação.</li>
-                <li><strong>Pesca:</strong> Rico em recursos marinhos, o Peru é um grande produtor de farinha e óleo de peixe, além de pescado para consumo humano.</li>
-                <li><strong>Turismo:</strong> Um setor em constante crescimento, atraindo milhões de visitantes anualmente para seus sítios arqueológicos, belezas naturais e cultura.</li>
-                <li><strong>Manufatura:</strong> Indústrias têxtil, de alimentos e bebidas, e de produtos químicos.</li>
+            <h3>Festivais e Tradições</h3>
+            <p>O calendário peruano é repleto de celebrações que refletem a profunda espiritualidade e alegria do seu povo:</p>
+            <ul class="festival-list">
+                <li><strong>Inti Raymi:</strong> A Festa do Sol, uma recriação espetacular da antiga cerimônia inca em Cusco.</li>
+                <li><strong>Carnaval:</strong> Celebrado com água, talco, danças e música em diversas regiões.</li>
+                <li><strong>Senhor dos Milagres:</strong> Uma das maiores procissões religiosas da América do Sul, em Lima.</li>
+                <li><strong>Virgem da Candelária:</strong> Grande festa religiosa e cultural em Puno, com danças e trajes típicos.</li>
             </ul>
 
-            <h3>Produtos de Exportação</h3>
-            <p>Os principais produtos que o Peru exporta para o mundo são:</p>
-            <ul class="export-list">
-                <li><strong>Minerais:</strong> Cobre, ouro, zinco, chumbo, prata.</li>
-                <li><strong>Produtos Agrícolas:</strong> Café, quinoa, aspargos, uvas, abacates, mirtilos.</li>
-                <li><strong>Produtos Pesqueiros:</strong> Farinha de peixe, óleo de peixe, lulas, vieiras.</li>
-                <li><strong>Têxteis:</strong> Produtos de algodão Pima e lã de alpaca.</li>
+            <h3>Música e Dança</h3>
+            <p>A música e a dança são expressões vitais da identidade peruana, com ritmos e estilos variados:</p>
+            <ul class="music-dance-list">
+                <li><strong>Marinera:</strong> Elegante dança de cortejo, considerada a dança nacional do Peru.</li>
+                <li><strong>Huayno:</strong> Gênero musical андino com raízes indígenas, popular nas terras altas.</li>
+                <li><strong>Festejo:</strong> Ritmo afro-peruano vibrante e alegre, com percussão e sapateado.</li>
+                <li><strong>Sicuris:</strong> Música tocada com flautas de Pã (sikus) em grupos, típica do altiplano.</li>
             </ul>
 
-            <h3>Comércio e Indústria</h3>
-            <p>O Peru tem buscado expandir suas relações comerciais e modernizar sua indústria:</p>
-            <ul class="trade-industry-list">
-                <li><strong>Acordos de Livre Comércio:</strong> O Peru possui acordos com diversos países e blocos econômicos, facilitando o comércio internacional.</li>
-                <li><strong>Investimento Estrangeiro:</strong> O país tem atraído investimentos em setores como mineração, energia e infraestrutura.</li>
-                <li><strong>Pequenas e Médias Empresas (PMEs):</strong> Contribuem significativamente para a geração de empregos e o desenvolvimento local.</li>
+            <h3>Gastronomia Peruana</h3>
+            <p>Reconhecida mundialmente, a culinária do Peru é uma fusão de sabores e técnicas milenares:</p>
+            <ul class="gastronomy-list">
+                <li class="gastronomy-item" data-category="prato-principal"><strong>Ceviche:</strong> Peixe fresco marinado em limão, cebola roxa e pimenta, prato bandeira do Peru.</li>
+                <li class="gastronomy-item" data-category="prato-principal"><strong>Lomo Saltado:</strong> Tiras de carne salteadas com cebola, tomate, batata frita e arroz.</li>
+                <li class="gastronomy-item" data-category="bebida"><strong>Pisco Sour:</strong> Coquetel nacional, feito com pisco, limão, clara de ovo e angostura.</li>
+                <li class="gastronomy-item" data-category="sobremesa"><strong>Suspiro a la Limeña:</strong> Doce cremoso à base de leite condensado e merengue.</li>
+                <li class="gastronomy-item" data-category="prato-principal"><strong>Ají de Gallina:</strong> Frango desfiado em um molho cremoso de ají amarillo, pão e nozes.</li>
+                <li class="gastronomy-item" data-category="bebida"><strong>Chicha Morada:</strong> Bebida refrescante de milho roxo, frutas e especiarias.</li>
             </ul>
+            <div class="gastronomy-filter">
+                <button data-filter="all" class="active">Todos</button>
+                <button data-filter="prato-principal">Pratos Principais</button>
+                <button data-filter="bebida">Bebidas</button>
+                <button data-filter="sobremesa">Sobremesas</button>
+            </div>
 
-            <h3>Curiosidades sobre o Peru</h3>
-            <p>Além de sua economia, o Peru é repleto de fatos interessantes:</p>
-            <ul class="curiosity-list">
-                <li><strong>Línguas Indígenas:</strong> Além do espanhol, o Quechua e o Aymara são línguas oficiais e amplamente faladas.</li>
-                <li><strong>Biodiversidade:</strong> O Peru é um dos países megadiversos do mundo, abrigando uma enorme variedade de espécies de flora e fauna.</li>
-                <li><strong>Patrimônios da UNESCO:</strong> Possui 13 Patrimônios Mundiais da UNESCO, incluindo Machu Picchu, o Centro Histórico de Cusco e as Linhas de Nazca.</li>
-                <li><strong>Berço da Batata:</strong> A batata é originária dos Andes peruanos, com milhares de variedades cultivadas.</li>
+            <h3>Artesanato e Têxteis</h3>
+            <p>O artesanato peruano é uma herança de técnicas pré-colombianas e coloniais, com destaque para os têxteis:</p>
+            <ul class="crafts-list">
+                <li><strong>Têxteis Andinos:</strong> Lãs de alpaca e lhama transformadas em ponchos, mantas e chullos (gorros).</li>
+                <li><strong>Cerâmica de Chulucanas:</strong> Famosa por suas peças de argila com desenhos geométricos e cores vibrantes.</li>
+                <li><strong>Retablos Ayacuchuanos:</strong> Caixas de madeira com miniaturas que representam cenas religiosas ou cotidianas.</li>
+                <li><strong>Prata:</strong> Joias e objetos decorativos em prata, com designs inspirados na iconografia inca.</li>
             </ul>
         </div>
     </section>
 
-    <footer>
+     <footer>
         <div class="container">
-            <p>&copy; 2023 Peru Explorer. Todos os direitos reservados.</p>
+            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="img/icon_facebook.png" alt="Facebook"></a>
-                <a href="#" aria-label="Instagram"><img src="img/icon_instagram.png" alt="Instagram"></a>
-                <a href="#" aria-label="Twitter"><img src="img/icon_twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitPeru no Instagram</h4>
-                <p>Integração com feed do Instagram aqui (requer API ou widget).</p>
+                <h4>#VisitEvoTech no Instagram</h4>
             </div>
         </div>
     </footer>
 
-    <!-- Botões de Acessibilidade e Modo -->
+    <!-- Botões de Acessibilidade e Modo (agora controlados pelo menu de configurações) -->
     <div class="accessibility-controls">
-        <button id="dark-mode-toggle" class="accessibility-btn" title="Alternar Modo Claro/Escuro">💡</button>
-        <button id="increase-font-btn" class="accessibility-btn" title="Aumentar/Reduzir Fonte">A+</button>
-        <button id="high-contrast-btn" class="accessibility-btn" title="Alternar Alto Contraste"> kontrast</button>
+        <!-- Este div pode ser removido se não houver mais botões aqui -->
     </div>
 
     <script src="js/main.js"></script>
