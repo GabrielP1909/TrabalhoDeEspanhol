@@ -27,14 +27,17 @@
     --card-border: var(--border-color);
     --footer-bg: var(--dark-text);
     --footer-text: white;
+
+    /* Novo gradiente para transição suave */
+    --transition-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.137) 0%, rgba(0, 0, 0, 0.5) 70%, var(--body-bg) 100%);
 }
 
 /* Modo Escuro */
 body.dark-mode {
     --body-bg: #2c2c2c;
-    --section-bg: #3a3a3a;
-    --text-color: #f0f0f0;
-    --light-text-color: #cccccc;
+    --section-bg: #1a1a1a;
+    --text-color: #f0f0f0; /* Texto principal claro */
+    --light-text-color: #cccccc; /* Texto secundário claro */
     --navbar-bg: rgba(44, 44, 44, 0.98);
     --card-bg: #4a4a4a;
     --card-border: #555555;
@@ -42,6 +45,83 @@ body.dark-mode {
     --footer-text: #f0f0f0;
     --shadow-light: rgba(255, 255, 255, 0.08);
     --shadow-medium: rgba(255, 255, 255, 0.15);
+    /* Ajuste o gradiente de transição para o modo escuro */
+    --transition-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 0.137) 0%, rgba(0, 0, 0, 0.5) 70%, var(--body-bg) 100%);
+}
+
+/* NOVO: Modo de Alto Contraste */
+body.high-contrast {
+    /* Cores de fundo e texto */
+    --body-bg: #000000; /* Fundo preto */
+    --section-bg: #000000; /* Seções também pretas */
+    --text-color: #FFFFFF; /* Texto principal branco */
+    --light-text-color: #CCCCCC; /* Texto secundário cinza claro para contraste */
+    --navbar-bg: #000000; /* Navbar preta */
+    --card-bg: #000000; /* Cards pretos */
+    --card-border: #FFFFFF; /* Borda branca para cards */
+    --footer-bg: #000000; /* Rodapé preto */
+    --footer-text: #FFFFFF; /* Texto do rodapé branco */
+
+    /* Cores de destaque - vermelho mais vivo */
+    --primary-color: #FF0000; /* Vermelho puro e vibrante */
+    --accent-color: #FFFF00; /* Amarelo puro para acentuar */
+    --gradient-primary: linear-gradient(45deg, #FF0000, #FF4500); /* Gradiente de vermelho mais intenso */
+    --gradient-button-hover: linear-gradient(45deg, #FF0000, #FFFF00); /* Gradiente de hover mais vivo */
+
+    /* Sombras e bordas para alto contraste */
+    --shadow-light: rgba(255, 255, 255, 0.2); /* Sombras mais visíveis */
+    --shadow-medium: rgba(255, 255, 255, 0.4);
+    --border-color: #FFFFFF; /* Bordas brancas */
+
+    /* Ajustes específicos para elementos que usam cores cinzas */
+    .navbar ul li a {
+        color: var(--text-color); /* Garante que o texto do link seja branco */
+    }
+    .navbar ul li a:hover {
+        color: var(--primary-color); /* Vermelho vivo no hover */
+    }
+    .contact-description {
+        color: var(--light-text-color); /* Garante que a descrição seja cinza claro */
+    }
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        background-color: #333333; /* Fundo dos inputs um cinza escuro */
+        color: #FFFFFF; /* Texto dos inputs branco */
+        border-color: #FFFFFF; /* Borda dos inputs branca */
+    }
+    #contact-form input[type="text"]:focus,
+    #contact-form input[type="email"]:focus,
+    #contact-form textarea:focus {
+        border-color: var(--primary-color); /* Borda vermelha no foco */
+        box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.4); /* Sombra vermelha no foco */
+    }
+    .festival-list li,
+    .music-dance-list li,
+    .gastronomy-list li,
+    .crafts-list li,
+    .destination-list li {
+        background-color: #1a1a1a; /* Fundo dos itens da lista cinza escuro */
+        color: #FFFFFF; /* Texto dos itens da lista branco */
+        border-color: #FFFFFF; /* Borda dos itens da lista branca */
+    }
+    .festival-list li:hover,
+    .music-dance-list li:hover,
+    .gastronomy-list li:hover,
+    .crafts-list li:hover,
+    .destination-list li:hover {
+        background-color: #333333; /* Fundo dos itens da lista cinza mais claro no hover */
+    }
+    .social-links img {
+        filter: invert(0); /* Remove o filtro invert para que os ícones mantenham suas cores originais ou sejam brancos se já forem assim */
+        /* Se os ícones forem pretos e você quiser que fiquem brancos, use filter: invert(1) brightness(2); */
+    }
+    .gallery-item {
+        border: 2px solid #FFFFFF; /* Borda branca para itens da galeria */
+    }
+    .gallery-item .overlay {
+        background: rgba(0, 0, 0, 0.9); /* Overlay mais opaco */
+    }
 }
 
 
@@ -54,6 +134,7 @@ body {
     color: var(--text-color); /* Usar variável */
     background-color: var(--body-bg); /* Usar variável */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transição para modo claro/escuro */
+    padding-top: 80px; /* Ajustado para a altura da navbar */
 }
 
 .container {
@@ -100,7 +181,8 @@ a:hover {
     padding: 14px 30px; /* Aumentado */
     border-radius: 8px; /* Mais arredondado */
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease; /* Adicionado box-shadow e background */
+    /* ALTERADO: Aumentar a duração da transição para 'background' para 0.5s */
+    transition: background 0.5s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
     font-size: 1.1em; /* Aumentado */
@@ -131,19 +213,45 @@ a:hover {
 
 /* Navbar */
 .navbar {
-    position: fixed;
+    position: fixed; /* ESSENCIAL: Fixa o elemento na viewport */
+    top: 0;          /* ESSENCIAL: Fixa o elemento no topo da viewport */
     width: 100%;
-    background: var(--navbar-bg); /* Usar variável */
-    box-shadow: 0 4px 15px var(--shadow-light); /* Sombra mais forte */
+    background: var(--navbar-bg); /* Fundo inicial */
+    box-shadow: 0 4px 15px var(--shadow-light); /* Sombra inicial */
     transition: background 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-    padding: 15px 0; /* Mais padding */
+    z-index: 1000;   /* Garante que o cabeçalho fique acima de outros elementos */
+    padding: 15px 0; /* Padding vertical */
+
+    /* Flexbox para alinhar logo, menu e settings-container */
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    align-items: center;
+    /* Removido padding-right/left aqui, pois o container interno já tem */
 }
 
 .navbar .container {
+    max-width: 1200px; /* Mantém a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo da navbar */
+    padding: 0 20px; /* Padding lateral para o conteúdo da navbar */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 1; /* Permite que o container ocupe o espaço disponível */
+}
+
+.navbar.scrolled { /* Nova classe para o estado "scrolled" */
+    background-color: rgba(255, 255, 255, 0.9); /* Levemente menos transparente */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada */
+}
+
+body.dark-mode .navbar.scrolled { /* Ajuste para dark mode */
+    background-color: rgba(44, 44, 44, 0.9);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.18);
+}
+
+body.high-contrast .navbar.scrolled { /* Ajuste para high contrast */
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .navbar .logo {
@@ -208,6 +316,8 @@ a:hover {
     text-align: center;
     color: white;
     overflow: hidden;
+    /* Removendo margin-bottom para evitar espaço extra */
+    margin-bottom: 0;
 }
 
 .hero-video {
@@ -218,24 +328,27 @@ a:hover {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -2;
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
+    opacity: 1;
+    visibility: visible;
+    display: block;
 }
-
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Overlay escuro */
-    z-index: -1;
+    /* Usando o novo gradiente de transição */
+    background: var(--transition-gradient);
+    /* Garantir que o overlay esteja acima do vídeo mas abaixo do conteúdo */
+    z-index: 0;
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Conteúdo acima do overlay */
     padding: 20px;
     max-width: 900px; /* Maior largura */
     animation: fadeIn 1.5s ease-out; /* Animação de entrada */
@@ -259,8 +372,9 @@ a:hover {
 section {
     padding: 100px 0; /* Mais padding */
     background-color: var(--section-bg); /* Usar variável */
-    margin-bottom: 40px; /* Mais espaçamento entre seções */
-    border-radius: 12px; /* Mais arredondado */
+    /* Removendo margin-bottom padrão para seções, será controlado pelo index.css */
+    margin-bottom: 0; /* Alterado para 0 */
+
     box-shadow: 0 8px 25px var(--shadow-light); /* Sombra mais pronunciada */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transição para modo claro/escuro */
     position: relative; /* Para elementos culturais */
@@ -280,6 +394,11 @@ section::before {
     opacity: 0.03; /* Levemente visível */
     z-index: 0;
     pointer-events: none; /* Não interfere com cliques */
+}
+
+body.high-contrast section::before {
+    opacity: 0.08; /* Torna o padrão mais visível no alto contraste */
+    filter: invert(1); /* Inverte as cores do padrão para se destacar no fundo preto */
 }
 
 section:hover {
@@ -349,9 +468,14 @@ footer p {
 }
 
 .social-links img {
-    width: 32px; /* Maior */
-    height: 32px;
+    width: 52px; /* Maior */
+    height: 52px;
     filter: invert(1); /* Para ícones brancos */
+}
+
+body.high-contrast .social-links img {
+    filter: invert(0); /* Remove o filtro invert para que os ícones mantenham suas cores originais ou sejam brancos se já forem assim */
+    /* Se os ícones forem pretos e você quiser que fiquem brancos, use filter: invert(1) brightness(2); */
 }
 
 .social-links a:hover {
@@ -360,75 +484,251 @@ footer p {
 }
 
 /* Botões de Acessibilidade e Modo */
-.accessibility-controls {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* O settings-container agora está dentro da navbar, então suas posições precisam ser relativas a ela */
+.settings-container {
+    position: relative; /* Relativo à navbar */
+    margin-left: auto; /* Empurra para a direita dentro do flex container */
+    /* Ajuste de margem para alinhar com o padding do container */
+    margin-right: 20px; /* Adiciona margem à direita para alinhar com o padding do container */
 }
 
-.accessibility-btn {
+.settings-btn {
     background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    font-size: 1.8em; /* Tamanho do ícone */
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1; /* Ajusta o alinhamento vertical do ícone */
 }
 
-.accessibility-btn:hover {
+.settings-btn:hover {
     background-color: #A01A20;
-    transform: scale(1.1);
+    transform: rotate(90deg); /* Efeito de rotação na engrenagem */
 }
 
-/* Estilos para acessibilidade */
-body.large-font {
-    font-size: 1.15em;
-}
-
-body.high-contrast {
-    filter: contrast(1.5);
-}
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Scroll Reveal Animation */
-.scroll-reveal {
+/* Menu de Configurações */
+.settings-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+    width: 320px; /* 🔹 um pouco mais largo para caber switches */
+    max-width: calc(100vw - 24px);
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(10,10,10,0.96);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+    z-index: 1001;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: top right;
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: scale(0.9);
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: white;
 }
 
-.scroll-reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Seta decorativa */
+.settings-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 24px; /* 🔹 ajustado para centralizar melhor */
+    width: 20px;
+    height: 20px;
+    background: rgba(10,10,10,0.96);
+    transform: rotate(45deg);
+    z-index: -1;
+    border-top-left-radius: 3px;
+    box-shadow: -2px -2px 8px rgba(0,0,0,0.3);
 }
+
+/* Ajuste para o modo claro */
+body:not(.dark-mode) .settings-menu {
+    background: var(--section-bg);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    color: var(--text-color);
+}
+
+body:not(.dark-mode) .settings-menu::before {
+    background: var(--section-bg);
+    box-shadow: -2px -2px 8px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para o modo de alto contraste no menu de configurações */
+body.high-contrast .settings-menu {
+    background: #000000; /* Fundo preto */
+    box-shadow: 0 12px 30px rgba(255,255,255,0.4); /* Sombra branca */
+    color: #FFFFFF; /* Texto branco */
+}
+
+body.high-contrast .settings-menu::before {
+    background: #000000; /* Seta preta */
+    box-shadow: -2px -2px 8px rgba(255,255,255,0.2);
+}
+
+.settings-menu.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.settings-menu h4 {
+    text-align: center;
+    font-size: 22px;
+    color: #d62828;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+body.high-contrast .settings-menu h4 {
+    color: var(--primary-color); /* Título do menu vermelho vivo */
+    border-bottom-color: #FFFFFF; /* Borda branca */
+}
+
+/* Lista de opções */
+.settings-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* 🔹 menos espaço para compactar */
+}
+
+.settings-menu ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6px; /* 🔹 espaço interno mais equilibrado */
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 1.05em;
+    gap: 10px;
+}
+
+body.high-contrast .settings-menu ul li {
+    border-bottom-color: #FFFFFF; /* Borda branca */
+}
+
+.settings-menu ul li:last-child {
+    border-bottom: none;
+}
+
+/* 🔹 Garantir que o texto quebre corretamente e não empurre o switch para fora */
+.settings-menu ul li span {
+    flex: 1;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* 🔹 Switch sempre visível */
+.settings-menu ul li .switch {
+    flex-shrink: 0;
+}
+
+/* Estilos para o Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px; /* Tamanho aproximado */
+    height: 28px; /* Tamanho aproximado */
+    flex-shrink: 0; /* Evita que o toggle encolha em telas pequenas */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .18s; /* Transição mais rápida */
+    border-radius: 28px; /* Arredondado */
+}
+
+body.high-contrast .switch .slider {
+    background-color: #666666; /* Fundo do slider cinza escuro */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px; /* Tamanho do knob */
+    width: 22px; /* Tamanho do knob */
+    left: 3px; /* Posição inicial do knob */
+    bottom: 3px; /* Posição inicial do knob */
+    background-color: white;
+    transition: .18s; /* Transição mais rápida */
+    border-radius: 50%; /* Knob redondo */
+}
+
+input:checked + .slider {
+    background-color: #d62828; /* Fundo vermelho no estado 'on' */
+}
+
+body.high-contrast input:checked + .slider {
+    background-color: var(--primary-color); /* Fundo do slider vermelho vivo quando ativado */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 0 3px rgba(217, 32, 39, 0.4); /* Outline suave para foco */
+    outline: none; /* Remove o outline padrão do navegador */
+}
+
+body.high-contrast input:focus + .slider {
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.6); /* Sombra de foco vermelha viva */
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px); /* Deslocamento do knob (46 - 22 - 3*2 = 18) */
+}
+
+/* Estilos de foco visíveis para acessibilidade */
+.settings-menu ul li span {
+    /* Para garantir que o span seja focável e tenha um outline */
+    outline: none; /* Remove o outline padrão */
+    border-radius: 4px; /* Para o outline ficar arredondado */
+    padding: 2px 4px; /* Pequeno padding para o outline não cortar o texto */
+}
+
+.settings-menu ul li span:focus-visible {
+    outline: 2px solid var(--accent-color); /* Outline visível para acessibilidade */
+    outline-offset: 2px;
+}
+
+body.high-contrast .settings-menu ul li span:focus-visible {
+    outline: 2px solid var(--accent-color); /* Outline amarelo puro para acessibilidade */
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
+    .navbar {
+        flex-direction: column; /* Empilha os itens da navbar em telas pequenas */
         align-items: flex-start;
+        /* Removido padding-right/left aqui, pois o container interno já tem */
+    }
+
+    .navbar .container {
+        width: 100%; /* Ocupa toda a largura */
+        padding: 0 20px; /* Adiciona padding interno */
     }
 
     .navbar ul {
@@ -458,6 +758,7 @@ body.high-contrast {
 
     section {
         padding: 70px 0;
+        margin-bottom: 0; /* Garante que não haja espaço extra */
     }
 
     section h2 {
@@ -471,6 +772,36 @@ body.high-contrast {
     .btn {
         padding: 12px 25px;
         font-size: 1em;
+    }
+
+    /* Ajustes para responsividade do botão de configurações */
+    .settings-container {
+        position: absolute; /* Absoluto em relação à navbar */
+        top: 15px; /* Ajuste para alinhar com o logo */
+        right: 20px; /* Alinhado à direita */
+        margin-left: 0; /* Remove margin-left: auto */
+        margin-right: 0; /* Remove margin-right */
+    }
+    .settings-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+    }
+    .settings-menu {
+        width: min(90vw, 300px); /* Responsivo: 90% da viewport ou 300px, o que for menor */
+        right: 8px; /* Mais próximo da borda em telas pequenas */
+        top: 50px; /* Ajuste a posição vertical */
+        padding: 10px; /* Padding menor */
+    }
+    .settings-menu h4 {
+        font-size: 1.2em;
+    }
+    .settings-menu ul li {
+        font-size: 1em;
+    }
+
+    body {
+        padding-top: 120px; /* Ajuste para telas menores, considerando o menu expandido */
     }
 }
 
@@ -495,4 +826,35 @@ body.high-contrast {
         padding: 10px 20px;
         font-size: 0.9em;
     }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Reveal Animation */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botões de Acessibilidade e Modo (agora controlados pelo menu de configurações) */
+.accessibility-controls {
+    /* Este div pode ser removido se não houver mais botões aqui */
+    /* Se mantiver, certifique-se de que não está causando conflito de layout */
+    display: none; /* Ocultar se não for mais usado */
 }

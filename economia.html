@@ -8,30 +8,67 @@
     <title>Economia e Curiosidades do Peru</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru Explorer</a>
+                <a href="index.html" class="logo">Peru</a>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
                     <li><a href="turismo.html">Turismo</a></li>
                     <li><a href="cultura.html">Cultura</a></li>
                     <li><a href="economia.html">Economia</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
+            <!-- Botão de Configurações e Menu -->
+            <div class="settings-container">
+                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <div id="settings-menu" class="settings-menu">
+                    <h4>Configurações</h4>
+                    <ul>
+                        <li>
+                            <span>Modo Noturno</span>
+                            <label class="switch">
+                                <input type="checkbox" id="dark-mode-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Aumentar Fonte</span>
+                            <label class="switch">
+                                <input type="checkbox" id="increase-font-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Alto Contraste</span>
+                            <label class="switch">
+                                <input type="checkbox" id="high-contrast-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Silenciar Sons</span>
+                            <label class="switch">
+                                <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <section class="economia-intro">
+    <section class="economia-intro scroll-reveal">
         <div class="container">
             <h2>Economia do Peru: Crescimento e Diversidade</h2>
             <p>A economia peruana tem demonstrado um crescimento robusto nas últimas décadas, impulsionada por seus vastos recursos naturais e uma crescente diversificação. Conheça os pilares que sustentam o desenvolvimento do país.</p>
         </div>
     </section>
 
-    <section class="economia-content">
+    <section class="economia-content scroll-reveal parallax-bg" data-parallax-speed="0.2" style="background-image: url('img/economia_bg.jpg'); background-size: cover; background-attachment: fixed;">
         <div class="container">
             <h3>Setores Econômicos Chave</h3>
             <p>Os principais motores da economia peruana incluem:</p>
@@ -71,16 +108,26 @@
         </div>
     </section>
 
-    <footer>
+     <footer>
         <div class="container">
-            <p>&copy; 2023 Peru Explorer. Todos os direitos reservados.</p>
+            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="img/icon_facebook.png" alt="Facebook"></a>
-                <a href="#" aria-label="Instagram"><img src="img/icon_instagram.png" alt="Instagram"></a>
-                <a href="#" aria-label="Twitter"><img src="img/icon_twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <!-- Placeholder para feed do Instagram -->
+            <div class="instagram-feed">
+                <h4>#VisitEvoTech no Instagram</h4>
             </div>
         </div>
     </footer>
+
+    <!-- Botões de Acessibilidade e Modo (agora controlados pelo menu de configurações) -->
+    <div class="accessibility-controls">
+        <!-- Este div pode ser removido se não houver mais botões aqui -->
+    </div>
 
     <script src="js/main.js"></script>
 </body>

@@ -5,6 +5,12 @@
     background-color: var(--body-bg); /* Usar variável */
     padding: 100px 0; /* Mais padding */
     text-align: center;
+    /* Ajuste principal: margin-top negativo para sobrepor a seção hero */
+    margin-top: -150px; /* Ajuste este valor conforme a altura desejada da sobreposição */
+    position: relative; /* Necessário para z-index */
+    z-index: 1; /* Garante que esta seção fique acima do hero-overlay */
+    /* REMOVIDO: border-top-left-radius e border-top-right-radius */
+    margin-bottom: 0; /* REMOVER TOTALMENTE O ESPAÇO VAZIO */
 }
 
 .highlights h2 {
@@ -63,12 +69,16 @@
 }
 
 .card .btn-card {
-    margin: 25px; /* Mais padding */
-    align-self: flex-start;
+    display: inline-block;
     background-color: var(--accent-color); /* Botão com cor de destaque */
     color: var(--dark-text); /* Texto escuro no botão dourado */
+    padding: 10px 20px; /* Aumentado */
+    border-radius: 6px; /* Mais arredondado */
     font-weight: 700;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 25px; /* Mais padding */
+    align-self: flex-start;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn-card:hover {
@@ -77,8 +87,40 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+body.high-contrast .card .btn-card {
+    background-color: var(--accent-color); /* Amarelo puro */
+    color: #000000; /* Texto preto */
+    box-shadow: 0 2px 8px rgba(255,255,255,0.2);
+}
+
+body.high-contrast .btn-card:hover {
+    background-color: #FFFF00; /* Amarelo puro no hover */
+    box-shadow: 0 4px 12px rgba(255,255,255,0.4);
+}
+
 @media (max-width: 768px) {
     .cards-grid {
         grid-template-columns: 1fr;
     }
+    .highlights {
+        margin-top: -80px; /* Ajuste para telas menores */
+    }
+}
+
+
+
+/* Ajustes para o footer para que ele se encaixe perfeitamente */
+footer {
+    margin-top: 0; /* Remove o margin-top padrão do footer */
+    position: relative;
+    z-index: 1; /* Garante que o footer esteja acima do separador */
+}
+
+/* Ajustes para o modo escuro */
+body.dark-mode .section-separator::before {
+    background-color: var(--body-bg); /* Usar background-color para transição */
+}
+
+body.dark-mode .section-separator::after {
+    background-color: var(--footer-bg); /* Usar background-color para transição */
 }

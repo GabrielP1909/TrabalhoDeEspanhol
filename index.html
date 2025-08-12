@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,58 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Descubra o Peru</title>
 </head>
+
 <body>
-    <header>
+    <!-- CABEÇALHO MODIFICADO -->
+    <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru Explorer</a>
+                <a href="index.html" class="logo">Peru</a>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
                     <li><a href="turismo.html">Turismo</a></li>
                     <li><a href="cultura.html">Cultura</a></li>
                     <li><a href="economia.html">Economia</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
+            </div>
+            <!-- Botão de Configurações e Menu - MOVIDO PARA DENTRO DA NAVBAR -->
+            <div class="settings-container">
+                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <div id="settings-menu" class="settings-menu">
+                    <h4>Configurações</h4>
+                    <ul>
+                        <li>
+                            <span>Modo Noturno</span>
+                            <label class="switch">
+                                <input type="checkbox" id="dark-mode-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Aumentar Fonte</span>
+                            <label class="switch">
+                                <input type="checkbox" id="increase-font-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Alto Contraste</span>
+                            <label class="switch">
+                                <input type="checkbox" id="high-contrast-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span>Silenciar Sons</span>
+                            <label class="switch">
+                                <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -28,36 +68,36 @@
     <section class="hero">
         <!-- Vídeo de fundo -->
         <video autoplay muted loop class="hero-video">
-            <source src="video/machu_picchu_video.mp4" type="video/mp4">
+            <source src="videos/video2.mp4" type="video/mp4">
             <!-- Adicione outros formatos de vídeo para compatibilidade -->
             Seu navegador não suporta vídeos HTML5.
         </video>
         <div class="hero-overlay"></div> <!-- Overlay escuro -->
         <div class="hero-content">
-            <h1>Descubra o Peru</h1>
+            <h1>Conheça o Peru</h1>
             <p>Um país rico em história, cultura e belezas naturais.</p>
-            <a href="sobre.html" class="btn">Saiba Mais</a>
+            <a href="sobre.html" class="btn">Saiba Mais</a> <!-- Link atualizado para a página Sobre -->
         </div>
     </section>
 
     <section class="highlights scroll-reveal">
         <div class="container">
-            <h2>Explore o Peru</h2>
+            <h2>Conheça o Peru</h2>
             <div class="cards-grid">
                 <div class="card">
-                    <img src="img/cultura_card.jpg" alt="Cultura Peruana">
+                    <img src="imagens/cultura.jpg" alt="Cultura Peruana">
                     <h3>Cultura Vibrante</h3>
                     <p>Mergulhe nos festivais, músicas e danças que contam a história de um povo.</p>
                     <a href="cultura.html" class="btn-card">Ver Cultura</a>
                 </div>
                 <div class="card">
-                    <img src="img/turismo_card.jpg" alt="Turismo no Peru">
+                    <img src="imagens/destinos.jpg" alt="Turismo no Peru">
                     <h3>Destinos Incríveis</h3>
                     <p>De Machu Picchu às Linhas de Nazca, o Peru oferece paisagens inesquecíveis.</p>
                     <a href="turismo.html" class="btn-card">Ver Turismo</a>
                 </div>
                 <div class="card">
-                    <img src="img/economia_card.jpg" alt="Economia Peruana">
+                    <img src="imagens/vendasderua.webp" alt="Economia Peruana">
                     <h3>Economia e Curiosidades</h3>
                     <p>Conheça os setores que movem o país e fatos fascinantes sobre o Peru.</p>
                     <a href="economia.html" class="btn-card">Ver Economia</a>
@@ -66,28 +106,27 @@
         </div>
     </section>
 
+
+
     <footer>
         <div class="container">
-            <p>&copy; 2023 Peru Explorer. Todos os direitos reservados.</p>
+            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
             <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="img/icon_facebook.png" alt="Facebook"></a>
-                <a href="#" aria-label="Instagram"><img src="img/icon_instagram.png" alt="Instagram"></a>
-                <a href="#" aria-label="Twitter"><img src="img/icon_twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitPeru no Instagram</h4>
-                <p>Integração com feed do Instagram aqui (requer API ou widget).</p>
+                <h4>#VisitEvoTech no Instagram</h4>
             </div>
         </div>
     </footer>
 
-    <!-- Botões de Acessibilidade e Modo -->
+    <!-- Botões de Acessibilidade e Modo (agora controlados pelo menu de configurações) -->
     <div class="accessibility-controls">
-        <button id="dark-mode-toggle" class="accessibility-btn" title="Alternar Modo Claro/Escuro">💡</button>
-        <button id="increase-font-btn" class="accessibility-btn" title="Aumentar/Reduzir Fonte">A+</button>
-        <button id="high-contrast-btn" class="accessibility-btn" title="Alternar Alto Contraste"> kontrast</button>
-        <button id="music-toggle-btn" class="accessibility-btn" title="Tocar/Parar Música">🎵</button>
+        <!-- Este div pode ser removido se não houver mais botões aqui -->
     </div>
 
     <!-- Música de fundo opcional -->
@@ -98,4 +137,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

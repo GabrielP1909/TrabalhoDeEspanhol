@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+body.high-contrast .contact-section {
+    background-color: var(--section-bg); /* Usa o fundo preto do alto contraste */
+    box-shadow: 0 8px 25px var(--shadow-medium); /* Sombra mais forte para contraste */
+}
+
 .contact-section h2 {
     margin-bottom: 30px; /* Mais espaçamento */
     font-size: 3.5em; /* Maior */
@@ -18,7 +23,7 @@
 
 .contact-description {
     font-size: 1.3em; /* Maior */
-    color: var(--light-text);
+    color: var(--light-text-color); /* Usar variável para modo noturno */
     margin-bottom: 50px; /* Mais espaçamento */
     max-width: 700px;
     margin-left: auto;
@@ -39,7 +44,7 @@
 
 #contact-form label {
     font-weight: 700; /* Mais negrito */
-    color: var(--dark-text);
+    color: var(--text-color); /* Usar variável para modo noturno */
     margin-bottom: 10px; /* Mais espaçamento */
     display: block;
     font-size: 1.2em; /* Maior */
@@ -55,19 +60,8 @@
     font-size: 1.1em; /* Maior */
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact-form input[type="text"]:focus,
-#contact-form input[type="email"]:focus,
-#contact-form textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 4px rgba(217, 32, 39, 0.2); /* Sombra com cor primária */
-    outline: none;
-}
-
-#contact-form textarea {
-    resize: vertical;
-    min-height: 180px; /* Altura mínima maior */
+    background-color: var(--body-bg); /* Fundo do input */
+    color: var(--text-color); /* Cor do texto do input */
 }
 
 .btn-submit {
@@ -91,6 +85,11 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+body.high-contrast .btn-submit:hover {
+    background-color: #FF0000; /* Vermelho puro no hover */
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4); /* Sombra branca no hover */
+}
+
 @media (max-width: 768px) {
     .contact-section {
         padding: 100px 0 40px;
@@ -109,4 +108,3 @@
         font-size: 1.2em;
     }
 }
-

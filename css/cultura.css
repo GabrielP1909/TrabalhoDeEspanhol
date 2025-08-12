@@ -91,6 +91,14 @@ body.dark-mode .crafts-list li:hover {
     background-color: #5a5a5a; /* Tom mais escuro para hover no dark mode */
 }
 
+/* Ajuste para high contrast mode no hover */
+body.high-contrast .festival-list li:hover,
+body.high-contrast .music-dance-list li:hover,
+body.high-contrast .gastronomy-list li:hover,
+body.high-contrast .crafts-list li:hover {
+    background-color: #333333; /* Fundo dos itens da lista cinza mais claro no hover */
+}
+
 
 .festival-list li strong,
 .music-dance-list li strong,
@@ -122,10 +130,19 @@ body.dark-mode .crafts-list li:hover {
     background-color: #A01A20;
 }
 
+body.high-contrast .gastronomy-filter button:hover {
+    background-color: #FF0000; /* Vermelho puro no hover */
+}
+
 .gastronomy-filter button.active {
     background-color: var(--accent-color);
     color: var(--dark-text);
     font-weight: bold;
+}
+
+body.high-contrast .gastronomy-filter button.active {
+    background-color: var(--accent-color); /* Amarelo puro */
+    color: #000000; /* Texto preto no botão ativo */
 }
 
 .gastronomy-item {

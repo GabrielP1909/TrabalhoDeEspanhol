@@ -91,6 +91,14 @@ body.dark-mode .curiosity-list li:hover {
     background-color: #5a5a5a; /* Tom mais escuro para hover no dark mode */
 }
 
+/* Ajuste para high contrast mode no hover */
+body.high-contrast .sector-list li:hover,
+body.high-contrast .export-list li:hover,
+body.high-contrast .trade-industry-list li:hover,
+body.high-contrast .curiosity-list li:hover {
+    background-color: #333333; /* Fundo dos itens da lista cinza mais claro no hover */
+}
+
 .sector-list li strong,
 .export-list li strong,
 .trade-industry-list li strong,

@@ -81,6 +81,11 @@ body.dark-mode .destination-list li:hover {
     background-color: #5a5a5a; /* Tom mais escuro para hover no dark mode */
 }
 
+/* Ajuste para high contrast mode no hover */
+body.high-contrast .destination-list li:hover {
+    background-color: #333333; /* Fundo dos itens da lista cinza mais claro no hover */
+}
+
 .destination-list li strong {
     color: var(--primary-color);
     margin-right: 10px; /* Mais espaçamento */
@@ -113,6 +118,10 @@ body.dark-mode .destination-list li:hover {
     border: 2px solid var(--section-bg); /* Borda branca para destacar */
 }
 
+body.high-contrast .gallery-item {
+    border: 2px solid #FFFFFF; /* Borda branca para destacar */
+}
+
 .gallery-item:hover {
     transform: scale(1.05); /* Mais zoom */
     box-shadow: 0 10px 25px var(--shadow-medium);
@@ -131,6 +140,10 @@ body.dark-mode .destination-list li:hover {
     transform: scale(1.02); /* Leve zoom na imagem */
 }
 
+body.high-contrast .gallery-item:hover img {
+    filter: brightness(0.8); /* Menos escuro para manter o contraste */
+}
+
 .gallery-item .overlay {
     position: absolute;
     bottom: 0;
@@ -144,6 +157,10 @@ body.dark-mode .destination-list li:hover {
     transform: translateY(100%);
     transition: transform 0.3s ease;
     font-weight: 600;
+}
+
+body.high-contrast .gallery-item .overlay {
+    background: rgba(0, 0, 0, 0.9); /* Overlay mais opaco */
 }
 
 .gallery-item:hover .overlay {
