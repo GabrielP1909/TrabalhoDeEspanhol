@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-PE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/economia.css">
-    <title>Economia e Curiosidades do Peru</title>
+    <title data-i18n="economy_intro_title">Economía de Perú: Crecimiento y Diversidad</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru</a>
+                <a href="index.html" class="logo" data-i18n="logo_text">Perú</a>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
-                    <li><a href="turismo.html">Turismo</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="economia.html">Economia</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="sobre.html" data-i18n="nav_about">Acerca de</a></li>
+                    <li><a href="turismo.html" data-i18n="nav_tourism">Turismo</a></li>
+                    <li><a href="cultura.html" data-i18n="nav_culture">Cultura</a></li>
+                    <li><a href="economia.html" data-i18n="nav_economy">Economía</a></li>
+                    <li><a href="contato.html" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </div>
             <!-- Botão de Configurações e Menu -->
             <div class="settings-container">
-                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <button id="settings-btn" class="settings-btn" data-i18n-title="settings_button_title" title="Configuración">⚙️</button>
                 <div id="settings-menu" class="settings-menu">
-                    <h4>Configurações</h4>
+                    <h4 data-i18n="settings_title">Configuración</h4>
                     <ul>
                         <li>
-                            <span>Modo Noturno</span>
+                            <span data-i18n="setting_dark_mode">Modo Oscuro</span>
                             <label class="switch">
                                 <input type="checkbox" id="dark-mode-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Aumentar Fonte</span>
+                            <span data-i18n="setting_increase_font">Aumentar Fuente</span>
                             <label class="switch">
                                 <input type="checkbox" id="increase-font-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Alto Contraste</span>
+                            <span data-i18n="setting_high_contrast">Alto Contraste</span>
                             <label class="switch">
                                 <input type="checkbox" id="high-contrast-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Silenciar Sons</span>
+                            <span data-i18n="setting_mute_sounds">Silenciar Sonidos</span>
                             <label class="switch">
                                 <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span data-i18n="setting_portuguese_language">Traducir a Portugués (BR)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="portuguese-language-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -63,54 +70,54 @@
 
     <section class="economia-intro scroll-reveal">
         <div class="container">
-            <h2>Economia do Peru: Crescimento e Diversidade</h2>
-            <p>A economia peruana tem demonstrado um crescimento robusto nas últimas décadas, impulsionada por seus vastos recursos naturais e uma crescente diversificação. Conheça os pilares que sustentam o desenvolvimento do país.</p>
+            <h2 data-i18n="economy_intro_title">Economía de Perú: Crecimiento y Diversidad</h2>
+            <p data-i18n="economy_intro_text">La economía peruana ha demostrado un crecimiento robusto en las últimas décadas, impulsada por sus vastos recursos naturales y una creciente diversificación. Conoce los pilares que sustentan el desarrollo del país.</p>
         </div>
     </section>
 
     <section class="economia-content scroll-reveal parallax-bg" data-parallax-speed="0.2" style="background-image: url('img/economia_bg.jpg'); background-size: cover; background-attachment: fixed;">
         <div class="container">
-            <h3>Setores Econômicos Chave</h3>
-            <p>Os principais motores da economia peruana incluem:</p>
+            <h3 data-i18n="economy_sectors_title">Sectores Económicos Clave</h3>
+            <p data-i18n="economy_sectors_text">Los principales motores de la economía peruana incluyen:</p>
             <ul class="sector-list">
-                <li><strong>Mineração:</strong> O Peru é um dos maiores produtores mundiais de cobre, ouro, zinco e prata.</li>
-                <li><strong>Agricultura:</strong> Produção de café, quinoa, aspargos, frutas e vegetais, com destaque para produtos de exportação.</li>
-                <li><strong>Pesca:</strong> Rico em recursos marinhos, o Peru é um grande produtor de farinha e óleo de peixe, além de pescado para consumo humano.</li>
-                <li><strong>Turismo:</strong> Um setor em constante crescimento, atraindo milhões de visitantes anualmente para seus sítios arqueológicos, belezas naturais e cultura.</li>
-                <li><strong>Manufatura:</strong> Indústrias têxtil, de alimentos e bebidas, e de produtos químicos.</li>
+                <li><strong data-i18n="economy_mining_strong">Minería:</strong> <span data-i18n="economy_mining_text">Perú es uno de los mayores productores mundiales de cobre, oro, zinc y plata.</span></li>
+                <li><strong data-i18n="economy_agriculture_strong">Agricultura:</strong> <span data-i18n="economy_agriculture_text">Producción de café, quinua, espárragos, frutas y verduras, con énfasis en productos de exportación.</span></li>
+                <li><strong data-i18n="economy_fishing_strong">Pesca:</strong> <span data-i18n="economy_fishing_text">Rico en recursos marinos, Perú es un gran productor de harina y aceite de pescado, además de pescado para consumo humano.</span></li>
+                <li><strong data-i18n="economy_tourism_strong">Turismo:</strong> <span data-i18n="economy_tourism_text">Un sector en constante crecimiento, atrayendo a millones de visitantes anualmente a sus sitios arqueológicos, bellezas naturales y cultura.</span></li>
+                <li><strong data-i18n="economy_manufacturing_strong">Manufactura:</strong> <span data-i18n="economy_manufacturing_text">Industrias textil, de alimentos y bebidas, y de productos químicos.</span></li>
             </ul>
 
-            <h3>Produtos de Exportação</h3>
-            <p>Os principais produtos que o Peru exporta para o mundo são:</p>
+            <h3 data-i18n="economy_exports_title">Productos de Exportación</h3>
+            <p data-i18n="economy_exports_text">Los principales productos que Perú exporta al mundo son:</p>
             <ul class="export-list">
-                <li><strong>Minerais:</strong> Cobre, ouro, zinco, chumbo, prata.</li>
-                <li><strong>Produtos Agrícolas:</strong> Café, quinoa, aspargos, uvas, abacates, mirtilos.</li>
-                <li><strong>Produtos Pesqueiros:</strong> Farinha de peixe, óleo de peixe, lulas, vieiras.</li>
-                <li><strong>Têxteis:</strong> Produtos de algodão Pima e lã de alpaca.</li>
+                <li><strong data-i18n="economy_exports_minerals_strong">Minerales:</strong> <span data-i18n="economy_exports_minerals_text">Cobre, oro, zinc, plomo, plata.</span></li>
+                <li><strong data-i18n="economy_exports_agricultural_strong">Productos Agrícolas:</strong> <span data-i18n="economy_exports_agricultural_text">Café, quinua, espárragos, uvas, aguacates, arándanos.</span></li>
+                <li><strong data-i18n="economy_exports_fishing_strong">Productos Pesqueros:</strong> <span data-i18n="economy_exports_fishing_text">Harina de pescado, aceite de pescado, calamares, vieiras.</span></li>
+                <li><strong data-i18n="economy_exports_textiles_strong">Textiles:</strong> <span data-i18n="economy_exports_textiles_text">Productos de algodón Pima y lana de alpaca.</span></li>
             </ul>
 
-            <h3>Comércio e Indústria</h3>
-            <p>O Peru tem buscado expandir suas relações comerciais e modernizar sua indústria:</p>
+            <h3 data-i18n="economy_trade_industry_title">Comercio e Industria</h3>
+            <p data-i18n="economy_trade_industry_text">Perú ha buscado expandir sus relaciones comerciales y modernizar su industria:</p>
             <ul class="trade-industry-list">
-                <li><strong>Acordos de Livre Comércio:</strong> O Peru possui acordos com diversos países e blocos econômicos, facilitando o comércio internacional.</li>
-                <li><strong>Investimento Estrangeiro:</strong> O país tem atraído investimentos em setores como mineração, energia e infraestrutura.</li>
-                <li><strong>Pequenas e Médias Empresas (PMEs):</strong> Contribuem significativamente para a geração de empregos e o desenvolvimento local.</li>
+                <li><strong data-i18n="economy_trade_agreements_strong">Acuerdos de Libre Comercio:</strong> <span data-i18n="economy_trade_agreements_text">Perú tiene acuerdos con varios países y bloques económicos, facilitando el comercio internacional.</span></li>
+                <li><strong data-i18n="economy_foreign_investment_strong">Inversión Extranjera:</strong> <span data-i18n="economy_foreign_investment_text">El país ha atraído inversiones en sectores como minería, energía e infraestructura.</span></li>
+                <li><strong data-i18n="economy_smes_strong">Pequenas y Medianas Empresas (PYMES):</strong> <span data-i18n="economy_smes_text">Contribuyen significativamente a la generación de empleo y el desarrollo local.</span></li>
             </ul>
 
-            <h3>Curiosidades sobre o Peru</h3>
-            <p>Além de sua economia, o Peru é repleto de fatos interessantes:</p>
+            <h3 data-i18n="economy_curiosities_title">Curiosidades sobre Perú</h3>
+            <p data-i18n="economy_curiosities_text">Además de su economía, Perú está lleno de datos interesantes:</p>
             <ul class="curiosity-list">
-                <li><strong>Línguas Indígenas:</strong> Além do espanhol, o Quechua e o Aymara são línguas oficiais e amplamente faladas.</li>
-                <li><strong>Biodiversidade:</strong> O Peru é um dos países megadiversos do mundo, abrigando uma enorme variedade de espécies de flora e fauna.</li>
-                <li><strong>Patrimônios da UNESCO:</strong> Possui 13 Patrimônios Mundiais da UNESCO, incluindo Machu Picchu, o Centro Histórico de Cusco e as Linhas de Nazca.</li>
-                <li><strong>Berço da Batata:</strong> A batata é originária dos Andes peruanos, com milhares de variedades cultivadas.</li>
+                <li><strong data-i18n="economy_indigenous_languages_strong">Idiomas Indígenas:</strong> <span data-i18n="economy_indigenous_languages_text">Además del español, el Quechua y el Aymara son idiomas oficiales y ampliamente hablados.</span></li>
+                <li><strong data-i18n="economy_biodiversity_strong">Biodiversidad:</strong> <span data-i18n="economy_biodiversity_text">Perú es uno de los países megadiversos del mundo, albergando una enorme variedad de especies de flora y fauna.</span></li>
+                <li><strong data-i18n="economy_unesco_heritage_strong">Patrimonios de la UNESCO:</strong> <span data-i18n="economy_unesco_heritage_text">Posee 13 Patrimonios Mundiales de la UNESCO, incluyendo Machu Picchu, el Centro Histórico de Cusco y las Líneas de Nazca.</span></li>
+                <li><strong data-i18n="economy_potato_birthplace_strong">Cuna de la Papa:</strong> <span data-i18n="economy_potato_birthplace_text">La papa es originaria de los Andes peruanos, con miles de variedades cultivadas.</span></li>
             </ul>
         </div>
     </section>
 
      <footer>
         <div class="container">
-            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 EvoTech. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -119,7 +126,7 @@
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitEvoTech no Instagram</h4>
+                <h4 data-i18n="instagram_feed_title">#VisitEvoTech en Instagram</h4>
             </div>
         </div>
     </footer>

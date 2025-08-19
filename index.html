@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-PE">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubra o Peru: história, cultura, gastronomia e turismo.">
+    <meta name="description" content="Descubre Perú: historia, cultura, gastronomía y turismo.">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>Descubra o Peru</title>
+    <title data-i18n="hero_title">Conoce Perú</title>
 </head>
 
 <body>
@@ -15,47 +15,54 @@
     <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru</a>
+                <a href="index.html" class="logo" data-i18n="logo_text">Perú</a>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
-                    <li><a href="turismo.html">Turismo</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="economia.html">Economia</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="sobre.html" data-i18n="nav_about">Acerca de</a></li>
+                    <li><a href="turismo.html" data-i18n="nav_tourism">Turismo</a></li>
+                    <li><a href="cultura.html" data-i18n="nav_culture">Cultura</a></li>
+                    <li><a href="economia.html" data-i18n="nav_economy">Economía</a></li>
+                    <li><a href="contato.html" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </div>
             <!-- Botão de Configurações e Menu - MOVIDO PARA DENTRO DA NAVBAR -->
             <div class="settings-container">
-                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <button id="settings-btn" class="settings-btn" data-i18n-title="settings_button_title" title="Configuración">⚙️</button>
                 <div id="settings-menu" class="settings-menu">
-                    <h4>Configurações</h4>
+                    <h4 data-i18n="settings_title">Configuración</h4>
                     <ul>
                         <li>
-                            <span>Modo Noturno</span>
+                            <span data-i18n="setting_dark_mode">Modo Oscuro</span>
                             <label class="switch">
                                 <input type="checkbox" id="dark-mode-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Aumentar Fonte</span>
+                            <span data-i18n="setting_increase_font">Aumentar Fuente</span>
                             <label class="switch">
                                 <input type="checkbox" id="increase-font-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Alto Contraste</span>
+                            <span data-i18n="setting_high_contrast">Alto Contraste</span>
                             <label class="switch">
                                 <input type="checkbox" id="high-contrast-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Silenciar Sons</span>
+                            <span data-i18n="setting_mute_sounds">Silenciar Sonidos</span>
                             <label class="switch">
                                 <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span data-i18n="setting_portuguese_language">Traducir a Portugués (BR)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="portuguese-language-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -74,43 +81,41 @@
         </video>
         <div class="hero-overlay"></div> <!-- Overlay escuro -->
         <div class="hero-content">
-            <h1>Conheça o Peru</h1>
-            <p>Um país rico em história, cultura e belezas naturais.</p>
-            <a href="sobre.html" class="btn">Saiba Mais</a> <!-- Link atualizado para a página Sobre -->
+            <h1 data-i18n="hero_title">Conoce Perú</h1>
+            <p data-i18n="hero_subtitle">Un país rico en historia, cultura y bellezas naturales.</p>
+            <a href="sobre.html" class="btn" data-i18n="hero_button">Saber Más</a>
         </div>
     </section>
 
     <section class="highlights scroll-reveal">
         <div class="container">
-            <h2>Conheça o Peru</h2>
+            <h2 data-i18n="highlights_title">Conoce Perú</h2>
             <div class="cards-grid">
                 <div class="card">
                     <img src="imagens/cultura.jpg" alt="Cultura Peruana">
-                    <h3>Cultura Vibrante</h3>
-                    <p>Mergulhe nos festivais, músicas e danças que contam a história de um povo.</p>
-                    <a href="cultura.html" class="btn-card">Ver Cultura</a>
+                    <h3 data-i18n="card_culture_title">Cultura Vibrante</h3>
+                    <p data-i18n="card_culture_text">Sumérgete en los festivales, músicas y danzas que cuentan la historia de un pueblo.</p>
+                    <a href="cultura.html" class="btn-card" data-i18n="card_culture_button">Ver Cultura</a>
                 </div>
                 <div class="card">
-                    <img src="imagens/destinos.jpg" alt="Turismo no Peru">
-                    <h3>Destinos Incríveis</h3>
-                    <p>De Machu Picchu às Linhas de Nazca, o Peru oferece paisagens inesquecíveis.</p>
-                    <a href="turismo.html" class="btn-card">Ver Turismo</a>
+                    <img src="imagens/destinos.jpg" alt="Turismo en Perú">
+                    <h3 data-i18n="card_tourism_title">Destinos Increíbles</h3>
+                    <p data-i18n="card_tourism_text">Desde Machu Picchu hasta las Líneas de Nazca, Perú ofrece paisajes inolvidables.</p>
+                    <a href="turismo.html" class="btn-card" data-i18n="card_tourism_button">Ver Turismo</a>
                 </div>
                 <div class="card">
-                    <img src="imagens/vendasderua.webp" alt="Economia Peruana">
-                    <h3>Economia e Curiosidades</h3>
-                    <p>Conheça os setores que movem o país e fatos fascinantes sobre o Peru.</p>
-                    <a href="economia.html" class="btn-card">Ver Economia</a>
+                    <img src="imagens/vendasderua.webp" alt="Economía Peruana">
+                    <h3 data-i18n="card_economy_title">Economía y Curiosidades</h3>
+                    <p data-i18n="card_economy_text">Conoce los sectores que mueven el país y datos fascinantes sobre Perú.</p>
+                    <a href="economia.html" class="btn-card" data-i18n="card_economy_button">Ver Economía</a>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <footer>
         <div class="container">
-            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 EvoTech. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -119,7 +124,7 @@
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitEvoTech no Instagram</h4>
+                <h4 data-i18n="instagram_feed_title">#VisitEvoTech en Instagram</h4>
             </div>
         </div>
     </footer>

@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-PE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/sobre.css"> <!-- Link para o novo CSS específico -->
-    <title>Sobre o Peru</title>
+    <link rel="stylesheet" href="css/sobre.css">
+    <title data-i18n="about_intro_title">Descubriendo Perú: Una Nación Milenaria</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru</a>
+                <a href="index.html" class="logo" data-i18n="logo_text">Perú</a>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="turismo.html">Turismo</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="economia.html">Economia</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="sobre.html" data-i18n="nav_about">Acerca de</a></li>
+                    <li><a href="turismo.html" data-i18n="nav_tourism">Turismo</a></li>
+                    <li><a href="cultura.html" data-i18n="nav_culture">Cultura</a></li>
+                    <li><a href="economia.html" data-i18n="nav_economy">Economía</a></li>
+                    <li><a href="contato.html" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </div>
             <!-- Botão de Configurações e Menu -->
             <div class="settings-container">
-                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <button id="settings-btn" class="settings-btn" data-i18n-title="settings_button_title" title="Configuración">⚙️</button>
                 <div id="settings-menu" class="settings-menu">
-                    <h4>Configurações</h4>
+                    <h4 data-i18n="settings_title">Configuración</h4>
                     <ul>
                         <li>
-                            <span>Modo Noturno</span>
+                            <span data-i18n="setting_dark_mode">Modo Oscuro</span>
                             <label class="switch">
                                 <input type="checkbox" id="dark-mode-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Aumentar Fonte</span>
+                            <span data-i18n="setting_increase_font">Aumentar Fuente</span>
                             <label class="switch">
                                 <input type="checkbox" id="increase-font-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Alto Contraste</span>
+                            <span data-i18n="setting_high_contrast">Alto Contraste</span>
                             <label class="switch">
                                 <input type="checkbox" id="high-contrast-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Silenciar Sons</span>
+                            <span data-i18n="setting_mute_sounds">Silenciar Sonidos</span>
                             <label class="switch">
                                 <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span data-i18n="setting_portuguese_language">Traducir a Portugués (BR)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="portuguese-language-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -63,47 +70,47 @@
 
     <section class="about-intro scroll-reveal">
         <div class="container">
-            <h2>Descobrindo o Peru: Uma Nação Milenar</h2>
-            <p>O Peru é um país de contrastes e maravilhas, onde a história antiga se encontra com a modernidade, e a diversidade geográfica se reflete em sua rica cultura. Conheça mais sobre esta nação андina fascinante.</p>
+            <h2 data-i18n="about_intro_title">Descubriendo Perú: Una Nación Milenaria</h2>
+            <p data-i18n="about_intro_text">Perú es un país de contrastes y maravillas, donde la historia antigua se encuentra con la modernidad, y la diversidad geográfica se refleja en su rica cultura. Conoce más sobre esta nación andina fascinante.</p>
         </div>
     </section>
 
     <section class="about-content scroll-reveal">
         <div class="container">
-            <h3>História e Legado Inca</h3>
-            <p>A história do Peru é profundamente marcada pela civilização Inca, que construiu um império vasto e sofisticado nos Andes. Sua capital, Cusco, e a impressionante cidade de Machu Picchu são testemunhos de um conhecimento avançado em arquitetura, engenharia e organização social.</p>
-            <p>Antes dos Incas, diversas culturas pré-colombianas floresceram na região, como os Moche, Nazca, Chimú e Wari, deixando um legado de arte, cerâmica e sistemas de irrigação que ainda hoje impressionam.</p>
+            <h3 data-i18n="about_history_title">Historia y Legado Inca</h3>
+            <p data-i18n="about_history_text1">La historia de Perú está profundamente marcada por la civilización Inca, que construyó un imperio vasto y sofisticado en los Andes. Su capital, Cusco, y la impresionante ciudad de Machu Picchu son testimonios de un conocimiento avanzado en arquitectura, ingeniería y organización social.</p>
+            <p data-i18n="about_history_text2">Antes de los Incas, diversas culturas precolombinas florecieron en la región, como los Moche, Nazca, Chimú y Wari, dejando un legado de arte, cerámica y sistemas de irrigación que aún hoy impresionan.</p>
 
-            <h3>Geografia Diversa</h3>
-            <p>O Peru é um dos poucos países que abrigam três regiões geográficas distintas: a costa árida, a imponente Cordilheira dos Andes e a vasta e exuberante Floresta Amazônica. Essa diversidade proporciona paisagens deslumbrantes, desde desertos e praias a montanhas nevadas e selvas densas, abrigando uma biodiversidade única no planeta.</p>
+            <h3 data-i18n="about_geography_title">Geografía Diversa</h3>
+            <p data-i18n="about_geography_text">Perú es uno de los pocos países que albergan tres regiones geográficas distintas: la costa árida, la imponente Cordillera de los Andes y la vasta y exuberante Selva Amazónica. Esta diversidad proporciona paisajes deslumbrantes, desde desiertos y playas hasta montañas nevadas y selvas densas, albergando una biodiversidad única en el planeta.</p>
             <div class="image-grid">
                 <div class="image-item">
                     <img src="imagens/costaperuana.webp" alt="Costa Peruana">
-                    <div class="overlay">Costa Peruana</div>
+                    <div class="overlay" data-i18n="about_coast_overlay">Costa Peruana</div>
                 </div>
                 <div class="image-item">
                     <img src="imagens/AndesPeruanos.jpg" alt="Andes Peruanos">
-                    <div class="overlay">Andes Peruanos</div>
+                    <div class="overlay" data-i18n="about_andes_overlay">Andes Peruanos</div>
                 </div>
                 <div class="image-item">
-                    <img src="imagens/amazonia-peruana.jpg" alt="Amazônia Peruana">
-                    <div class="overlay">Amazônia Peruana</div>
+                    <img src="imagens/amazonia-peruana.jpg" alt="Amazonía Peruana">
+                    <div class="overlay" data-i18n="about_amazon_overlay">Amazonía Peruana</div>
                 </div>
             </div>
 
-            <h3>Povo e Cultura</h3>
-            <p>A população peruana é um caldeirão de etnias, resultado da fusão entre os povos indígenas, descendentes de europeus, africanos e asiáticos. Essa miscigenação se manifesta em uma cultura vibrante, expressa na culinária, música, dança, artesanato e nas festividades que celebram tanto as tradições ancestrais quanto as influências coloniais.</p>
-            <p>O respeito às tradições e a hospitalidade são características marcantes do povo peruano, que se orgulha de sua herança e compartilha com o mundo a riqueza de sua identidade.</p>
+            <h3 data-i18n="about_people_culture_title">Pueblo y Cultura</h3>
+            <p data-i18n="about_people_culture_text1">La población peruana es un crisol de etnias, resultado de la fusión entre los pueblos indígenas, descendientes de europeos, africanos y asiáticos. Esta mezcla se manifiesta en una cultura vibrante, expresada en la culinaria, música, danza, artesanía y en las festividades que celebran tanto las tradiciones ancestrales como las influencias coloniales.</p>
+            <p data-i18n="about_people_culture_text2">El respeto a las tradiciones y la hospitalidad son características destacadas del pueblo peruano, que se enorgullece de su herencia y comparte con el mundo la riqueza de su identidad.</p>
 
-            <h3>O Peru Hoje</h3>
-            <p>Atualmente, o Peru é uma nação em desenvolvimento, com uma economia crescente impulsionada pela mineração, agricultura, pesca e, cada vez mais, pelo turismo. Lima, sua capital, é um centro urbano moderno e vibrante, reconhecido como um dos principais polos gastronômicos do mundo.</p>
-            <p>O país continua a investir na preservação de seu patrimônio cultural e natural, buscando um equilíbrio entre o progresso e a manutenção de suas raízes milenares.</p>
+            <h3 data-i18n="about_peru_today_title">Perú Hoy</h3>
+            <p data-i18n="about_peru_today_text1">Actualmente, Perú es una nación en desarrollo, con una economía creciente impulsada por la minería, agricultura, pesca y, cada vez más, por el turismo. Lima, su capital, es un centro urbano moderno y vibrante, reconocido como uno de los principales polos gastronómicos del mundo.</p>
+            <p data-i18n="about_peru_today_text2">El país continúa invirtiendo en la preservación de su patrimonio cultural y natural, buscando un equilibrio entre el progreso y el mantenimiento de sus raíces milenarias.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 EvoTech. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -112,7 +119,7 @@
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitEvoTech no Instagram</h4>
+                <h4 data-i18n="instagram_feed_title">#VisitEvoTech en Instagram</h4>
             </div>
         </div>
     </footer>

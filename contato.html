@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-PE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/contato.css">
-    <title>Contato</title>
+    <title data-i18n="contact_title">Contáctanos</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru</a>
+                <a href="index.html" class="logo" data-i18n="logo_text">Perú</a>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
-                    <li><a href="turismo.html">Turismo</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="economia.html">Economia</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="sobre.html" data-i18n="nav_about">Acerca de</a></li>
+                    <li><a href="turismo.html" data-i18n="nav_tourism">Turismo</a></li>
+                    <li><a href="cultura.html" data-i18n="nav_culture">Cultura</a></li>
+                    <li><a href="economia.html" data-i18n="nav_economy">Economía</a></li>
+                    <li><a href="contato.html" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </div>
             <!-- Botão de Configurações e Menu -->
             <div class="settings-container">
-                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <button id="settings-btn" class="settings-btn" data-i18n-title="settings_button_title" title="Configuración">⚙️</button>
                 <div id="settings-menu" class="settings-menu">
-                    <h4>Configurações</h4>
+                    <h4 data-i18n="settings_title">Configuración</h4>
                     <ul>
                         <li>
-                            <span>Modo Noturno</span>
+                            <span data-i18n="setting_dark_mode">Modo Oscuro</span>
                             <label class="switch">
                                 <input type="checkbox" id="dark-mode-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Aumentar Fonte</span>
+                            <span data-i18n="setting_increase_font">Aumentar Fuente</span>
                             <label class="switch">
                                 <input type="checkbox" id="increase-font-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Alto Contraste</span>
+                            <span data-i18n="setting_high_contrast">Alto Contraste</span>
                             <label class="switch">
                                 <input type="checkbox" id="high-contrast-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Silenciar Sons</span>
+                            <span data-i18n="setting_mute_sounds">Silenciar Sonidos</span>
                             <label class="switch">
                                 <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span data-i18n="setting_portuguese_language">Traducir a Portugués (BR)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="portuguese-language-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -63,33 +70,33 @@
 
     <section class="contact-section scroll-reveal">
         <div class="container">
-            <h2>Entre em Contato</h2>
-            <p class="contact-description">Tem alguma dúvida, sugestão ou gostaria de saber mais sobre o Peru? Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            <h2 data-i18n="contact_title">Contáctanos</h2>
+            <p class="contact-description" data-i18n="contact_description">¿Tienes alguna pregunta, sugerencia o te gustaría saber más sobre Perú? Completa el formulario a continuación y nos pondremos en contacto lo antes posible.</p>
             <form id="contact-form">
                 <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                    <label for="name" data-i18n="form_name_label">Nombre:</label>
+                    <input type="text" id="name" name="name" required data-i18n-placeholder="form_name_placeholder" placeholder="Tu nombre completo">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                    <label for="email" data-i18n="form_email_label">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required data-i18n-placeholder="form_email_placeholder" placeholder="tu.correo@ejemplo.com">
                 </div>
                 <div class="form-group">
-                    <label for="subject">Assunto:</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Assunto da mensagem">
+                    <label for="subject" data-i18n="form_subject_label">Asunto:</label>
+                    <input type="text" id="subject" name="subject" required data-i18n-placeholder="form_subject_placeholder" placeholder="Asunto del mensaje">
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    <label for="message" data-i18n="form_message_label">Mensaje:</label>
+                    <textarea id="message" name="message" required data-i18n-placeholder="form_message_placeholder" placeholder="Escribe tu mensaje aquí..."></textarea>
                 </div>
-                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                <button type="submit" class="btn-submit" data-i18n="form_submit_button">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
    <footer>
         <div class="container">
-            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 EvoTech. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -98,7 +105,7 @@
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitEvoTech no Instagram</h4>
+                <h4 data-i18n="instagram_feed_title">#VisitEvoTech en Instagram</h4>
             </div>
         </div>
     </footer>

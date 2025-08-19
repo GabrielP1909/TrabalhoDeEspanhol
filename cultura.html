@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-PE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/cultura.css">
-    <title>Cultura do Peru</title>
+    <title data-i18n="culture_intro_title">Cultura Vibrante de Perú</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru</a>
+                <a href="index.html" class="logo" data-i18n="logo_text">Perú</a>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
-                    <li><a href="turismo.html">Turismo</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="economia.html">Economia</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="sobre.html" data-i18n="nav_about">Acerca de</a></li>
+                    <li><a href="turismo.html" data-i18n="nav_tourism">Turismo</a></li>
+                    <li><a href="cultura.html" data-i18n="nav_culture">Cultura</a></li>
+                    <li><a href="economia.html" data-i18n="nav_economy">Economía</a></li>
+                    <li><a href="contato.html" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </div>
             <!-- Botão de Configurações e Menu -->
             <div class="settings-container">
-                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <button id="settings-btn" class="settings-btn" data-i18n-title="settings_button_title" title="Configuración">⚙️</button>
                 <div id="settings-menu" class="settings-menu">
-                    <h4>Configurações</h4>
+                    <h4 data-i18n="settings_title">Configuración</h4>
                     <ul>
                         <li>
-                            <span>Modo Noturno</span>
+                            <span data-i18n="setting_dark_mode">Modo Oscuro</span>
                             <label class="switch">
                                 <input type="checkbox" id="dark-mode-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Aumentar Fonte</span>
+                            <span data-i18n="setting_increase_font">Aumentar Fuente</span>
                             <label class="switch">
                                 <input type="checkbox" id="increase-font-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Alto Contraste</span>
+                            <span data-i18n="setting_high_contrast">Alto Contraste</span>
                             <label class="switch">
                                 <input type="checkbox" id="high-contrast-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Silenciar Sons</span>
+                            <span data-i18n="setting_mute_sounds">Silenciar Sonidos</span>
                             <label class="switch">
                                 <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span data-i18n="setting_portuguese_language">Traducir a Portugués (BR)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="portuguese-language-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -63,62 +70,62 @@
 
     <section class="cultura-intro scroll-reveal">
         <div class="container">
-            <h2>Cultura Vibrante do Peru</h2>
-            <p>A cultura peruana é um mosaico fascinante de tradições ancestrais, influências coloniais e uma rica diversidade étnica. Mergulhe nos festivais coloridos, na música envolvente, nas danças expressivas e na culinária que é Patrimônio Cultural da Humanidade.</p>
+            <h2 data-i18n="culture_intro_title">Cultura Vibrante de Perú</h2>
+            <p data-i18n="culture_intro_text">La cultura peruana es un mosaico fascinante de tradiciones ancestrales, influencias coloniales y una rica diversidad étnica. Sumérgete en los festivales coloridos, la música envolvente, las danzas expresivas y la culinaria que es Patrimonio Cultural de la Humanidad.</p>
         </div>
     </section>
 
     <section class="cultura-content scroll-reveal">
         <div class="container">
-            <h3>Festivais e Tradições</h3>
-            <p>O calendário peruano é repleto de celebrações que refletem a profunda espiritualidade e alegria do seu povo:</p>
+            <h3 data-i18n="festivals_title">Festivales y Tradiciones</h3>
+            <p data-i18n="festivals_text">El calendario peruano está lleno de celebraciones que reflejan la profunda espiritualidad y alegría de su gente:</p>
             <ul class="festival-list">
-                <li><strong>Inti Raymi:</strong> A Festa do Sol, uma recriação espetacular da antiga cerimônia inca em Cusco.</li>
-                <li><strong>Carnaval:</strong> Celebrado com água, talco, danças e música em diversas regiões.</li>
-                <li><strong>Senhor dos Milagres:</strong> Uma das maiores procissões religiosas da América do Sul, em Lima.</li>
-                <li><strong>Virgem da Candelária:</strong> Grande festa religiosa e cultural em Puno, com danças e trajes típicos.</li>
+                <li><strong data-i18n="festival_inti_raymi_strong">Inti Raymi:</strong> <span data-i18n="festival_inti_raymi_text">La Fiesta del Sol, una recreación espectacular de la antigua ceremonia inca en Cusco.</span></li>
+                <li><strong data-i18n="festival_carnival_strong">Carnaval:</strong> <span data-i18n="festival_carnival_text">Celebrado con agua, talco, danzas y música en diversas regiones.</span></li>
+                <li><strong data-i18n="festival_lord_miracles_strong">Señor de los Milagros:</strong> <span data-i18n="festival_lord_miracles_text">Una de las procesiones religiosas más grandes de América del Sur, en Lima.</span></li>
+                <li><strong data-i18n="festival_virgin_candelaria_strong">Virgen de la Candelaria:</strong> <span data-i18n="festival_virgin_candelaria_text">Gran fiesta religiosa y cultural en Puno, con danzas y trajes típicos.</span></li>
             </ul>
 
-            <h3>Música e Dança</h3>
-            <p>A música e a dança são expressões vitais da identidade peruana, com ritmos e estilos variados:</p>
+            <h3 data-i18n="music_dance_title">Música y Danza</h3>
+            <p data-i18n="music_dance_text">La música y la danza son expresiones vitales de la identidad peruana, con ritmos y estilos variados:</p>
             <ul class="music-dance-list">
-                <li><strong>Marinera:</strong> Elegante dança de cortejo, considerada a dança nacional do Peru.</li>
-                <li><strong>Huayno:</strong> Gênero musical андino com raízes indígenas, popular nas terras altas.</li>
-                <li><strong>Festejo:</strong> Ritmo afro-peruano vibrante e alegre, com percussão e sapateado.</li>
-                <li><strong>Sicuris:</strong> Música tocada com flautas de Pã (sikus) em grupos, típica do altiplano.</li>
+                <li><strong data-i18n="music_marinera_strong">Marinera:</strong> <span data-i18n="music_marinera_text">Elegante danza de cortejo, considerada la danza nacional de Perú.</span></li>
+                <li><strong data-i18n="music_huayno_strong">Huayno:</strong> <span data-i18n="music_huayno_text">Género musical andino con raíces indígenas, popular en las tierras altas.</span></li>
+                <li><strong data-i18n="music_festejo_strong">Festejo:</strong> <span data-i18n="music_festejo_text">Ritmo afroperuano vibrante y alegre, con percusión y zapateado.</span></li>
+                <li><strong data-i18n="music_sicuris_strong">Sicuris:</strong> <span data-i18n="music_sicuris_text">Música tocada con flautas de Pan (sikus) en grupos, típica del altiplano.</span></li>
             </ul>
 
-            <h3>Gastronomia Peruana</h3>
-            <p>Reconhecida mundialmente, a culinária do Peru é uma fusão de sabores e técnicas milenares:</p>
+            <h3 data-i18n="gastronomy_title">Gastronomía Peruana</h3>
+            <p data-i18n="gastronomy_text">Reconocida mundialmente, la culinaria de Perú es una fusión de sabores y técnicas milenarias:</p>
             <ul class="gastronomy-list">
-                <li class="gastronomy-item" data-category="prato-principal"><strong>Ceviche:</strong> Peixe fresco marinado em limão, cebola roxa e pimenta, prato bandeira do Peru.</li>
-                <li class="gastronomy-item" data-category="prato-principal"><strong>Lomo Saltado:</strong> Tiras de carne salteadas com cebola, tomate, batata frita e arroz.</li>
-                <li class="gastronomy-item" data-category="bebida"><strong>Pisco Sour:</strong> Coquetel nacional, feito com pisco, limão, clara de ovo e angostura.</li>
-                <li class="gastronomy-item" data-category="sobremesa"><strong>Suspiro a la Limeña:</strong> Doce cremoso à base de leite condensado e merengue.</li>
-                <li class="gastronomy-item" data-category="prato-principal"><strong>Ají de Gallina:</strong> Frango desfiado em um molho cremoso de ají amarillo, pão e nozes.</li>
-                <li class="gastronomy-item" data-category="bebida"><strong>Chicha Morada:</strong> Bebida refrescante de milho roxo, frutas e especiarias.</li>
+                <li class="gastronomy-item" data-category="prato-principal"><strong data-i18n="gastronomy_ceviche_strong">Ceviche:</strong> <span data-i18n="gastronomy_ceviche_text">Pescado fresco marinado en limón, cebolla morada y ají, plato bandera de Perú.</span></li>
+                <li class="gastronomy-item" data-category="prato-principal"><strong data-i18n="gastronomy_lomo_saltado_strong">Lomo Saltado:</strong> <span data-i18n="gastronomy_lomo_saltado_text">Tiras de carne salteadas con cebolla, tomate, papas fritas y arroz.</span></li>
+                <li class="gastronomy-item" data-category="bebida"><strong data-i18n="gastronomy_pisco_sour_strong">Pisco Sour:</strong> <span data-i18n="gastronomy_pisco_sour_text">Cóctel nacional, hecho con pisco, limón, clara de huevo y angostura.</span></li>
+                <li class="gastronomy-item" data-category="sobremesa"><strong data-i18n="gastronomy_suspiro_limena_strong">Suspiro a la Limeña:</strong> <span data-i18n="gastronomy_suspiro_limena_text">Dulce cremoso a base de leche condensada y merengue.</span></li>
+                <li class="gastronomy-item" data-category="prato-principal"><strong data-i18n="gastronomy_aji_gallina_strong">Ají de Gallina:</strong> <span data-i18n="gastronomy_aji_gallina_text">Pollo deshilachado en una salsa cremosa de ají amarillo, pan y nueces.</span></li>
+                <li class="gastronomy-item" data-category="bebida"><strong data-i18n="gastronomy_chicha_morada_strong">Chicha Morada:</strong> <span data-i18n="gastronomy_chicha_morada_text">Bebida refrescante de maíz morado, frutas y especias.</span></li>
             </ul>
             <div class="gastronomy-filter">
-                <button data-filter="all" class="active">Todos</button>
-                <button data-filter="prato-principal">Pratos Principais</button>
-                <button data-filter="bebida">Bebidas</button>
-                <button data-filter="sobremesa">Sobremesas</button>
+                <button data-filter="all" class="active" data-i18n="gastronomy_filter_all">Todos</button>
+                <button data-filter="prato-principal" data-i18n="gastronomy_filter_main_dishes">Platos Principales</button>
+                <button data-filter="bebida" data-i18n="gastronomy_filter_drinks">Bebidas</button>
+                <button data-filter="sobremesa" data-i18n="gastronomy_filter_desserts">Postres</button>
             </div>
 
-            <h3>Artesanato e Têxteis</h3>
-            <p>O artesanato peruano é uma herança de técnicas pré-colombianas e coloniais, com destaque para os têxteis:</p>
+            <h3 data-i18n="crafts_title">Artesanía y Textiles</h3>
+            <p data-i18n="crafts_text">La artesanía peruana es una herencia de técnicas precolombinas y coloniales, con énfasis en los textiles:</p>
             <ul class="crafts-list">
-                <li><strong>Têxteis Andinos:</strong> Lãs de alpaca e lhama transformadas em ponchos, mantas e chullos (gorros).</li>
-                <li><strong>Cerâmica de Chulucanas:</strong> Famosa por suas peças de argila com desenhos geométricos e cores vibrantes.</li>
-                <li><strong>Retablos Ayacuchuanos:</strong> Caixas de madeira com miniaturas que representam cenas religiosas ou cotidianas.</li>
-                <li><strong>Prata:</strong> Joias e objetos decorativos em prata, com designs inspirados na iconografia inca.</li>
+                <li><strong data-i18n="crafts_textiles_strong">Textiles Andinos:</strong> <span data-i18n="crafts_textiles_text">Lanas de alpaca y llama transformadas en ponchos, mantas y chullos (gorros).</span></li>
+                <li><strong data-i18n="crafts_ceramics_strong">Cerámica de Chulucanas:</strong> <span data-i18n="crafts_ceramics_text">Famosa por sus piezas de arcilla con diseños geométricos y colores vibrantes.</span></li>
+                <li><strong data-i18n="crafts_retablos_strong">Retablos Ayacuchanos:</strong> <span data-i18n="crafts_retablos_text">Cajas de madera con miniaturas que representan escenas religiosas o cotidianas.</span></li>
+                <li><strong data-i18n="crafts_silver_strong">Plata:</strong> <span data-i18n="crafts_silver_text">Joyas y objetos decorativos en plata, con diseños inspirados en la iconografía inca.</span></li>
             </ul>
         </div>
     </section>
 
      <footer>
         <div class="container">
-            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 EvoTech. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -127,7 +134,7 @@
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitEvoTech no Instagram</h4>
+                <h4 data-i18n="instagram_feed_title">#VisitEvoTech en Instagram</h4>
             </div>
         </div>
     </footer>

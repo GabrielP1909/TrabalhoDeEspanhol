@@ -1,57 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-PE">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/turismo.css">
-    <title>Turismo no Peru</title>
+    <title data-i18n="tourism_intro_title">Turismo en Perú: Una Aventura Inolvidable</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">Peru</a>
+                <a href="index.html" class="logo" data-i18n="logo_text">Perú</a>
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li> <!-- Link para a nova página Sobre -->
-                    <li><a href="turismo.html">Turismo</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="economia.html">Economia</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Inicio</a></li>
+                    <li><a href="sobre.html" data-i18n="nav_about">Acerca de</a></li>
+                    <li><a href="turismo.html" data-i18n="nav_tourism">Turismo</a></li>
+                    <li><a href="cultura.html" data-i18n="nav_culture">Cultura</a></li>
+                    <li><a href="economia.html" data-i18n="nav_economy">Economía</a></li>
+                    <li><a href="contato.html" data-i18n="nav_contact">Contacto</a></li>
                 </ul>
             </div>
             <!-- Botão de Configurações e Menu -->
             <div class="settings-container">
-                <button id="settings-btn" class="settings-btn" title="Configurações">⚙️</button>
+                <button id="settings-btn" class="settings-btn" data-i18n-title="settings_button_title" title="Configuración">⚙️</button>
                 <div id="settings-menu" class="settings-menu">
-                    <h4>Configurações</h4>
+                    <h4 data-i18n="settings_title">Configuración</h4>
                     <ul>
                         <li>
-                            <span>Modo Noturno</span>
+                            <span data-i18n="setting_dark_mode">Modo Oscuro</span>
                             <label class="switch">
                                 <input type="checkbox" id="dark-mode-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Aumentar Fonte</span>
+                            <span data-i18n="setting_increase_font">Aumentar Fuente</span>
                             <label class="switch">
                                 <input type="checkbox" id="increase-font-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Alto Contraste</span>
+                            <span data-i18n="setting_high_contrast">Alto Contraste</span>
                             <label class="switch">
                                 <input type="checkbox" id="high-contrast-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
                         <li>
-                            <span>Silenciar Sons</span>
+                            <span data-i18n="setting_mute_sounds">Silenciar Sonidos</span>
                             <label class="switch">
                                 <input type="checkbox" id="mute-sounds-toggle-menu">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <span data-i18n="setting_portuguese_language">Traducir a Portugués (BR)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="portuguese-language-toggle-menu">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -63,51 +70,51 @@
 
     <section class="turismo-intro">
         <div class="container">
-            <h2>Turismo no Peru: Uma Aventura Inesquecível</h2>
-            <p>O Peru é um destino que cativa viajantes de todo o mundo com sua mistura única de história antiga, paisagens deslumbrantes e uma cultura vibrante. Prepare-se para explorar ruínas misteriosas, cidades coloniais charmosas e maravilhas naturais.</p>
+            <h2 data-i18n="tourism_intro_title">Turismo en Perú: Una Aventura Inolvidable</h2>
+            <p data-i18n="tourism_intro_text">Perú es un destino que cautiva a viajeros de todo el mundo con su mezcla única de historia antigua, paisajes deslumbrantes y una cultura vibrante. Prepárate para explorar ruinas misteriosas, ciudades coloniales encantadoras y maravillas naturales.</p>
         </div>
     </section>
 
     <section class="turismo-content">
         <div class="container">
-            <h3>Principais Destinos</h3>
-            <p>Descubra os lugares imperdíveis que fazem do Peru um dos destinos mais procurados da América do Sul:</p>
+            <h3 data-i18n="tourism_destinations_title">Principales Destinos</h3>
+            <p data-i18n="tourism_destinations_text">Descubre los lugares imperdibles que hacen de Perú uno de los destinos más buscados de Sudamérica:</p>
             <ul class="destination-list">
-                <li><strong>Machu Picchu:</strong> A cidadela inca perdida, uma das Sete Maravilhas do Mundo Moderno.</li>
-                <li><strong>Cusco:</strong> A antiga capital do Império Inca, repleta de história e arquitetura colonial.</li>
-                <li><strong>Lago Titicaca:</strong> O lago navegável mais alto do mundo, lar das ilhas flutuantes de Uros.</li>
-                <li><strong>Lima:</strong> A capital gastronômica da América do Sul, com uma rica história e vida noturna agitada.</li>
-                <li><strong>Arequipa:</strong> A "Cidade Branca", famosa por sua arquitetura de sillar e o majestoso Cânion do Colca.</li>
-                <li><strong>Linhas de Nazca:</strong> Enigmáticos geoglifos desenhados no deserto, visíveis apenas do alto.</li>
-                <li><strong>Vale Sagrado dos Incas:</strong> Um vale fértil entre Cusco e Machu Picchu, com sítios arqueológicos e vilarejos tradicionais.</li>
+                <li><strong data-i18n="tourism_machu_picchu_strong">Machu Picchu:</strong> <span data-i18n="tourism_machu_picchu_text">La ciudadela inca perdida, una de las Siete Maravillas del Mundo Moderno.</span></li>
+                <li><strong data-i18n="tourism_cusco_strong">Cusco:</strong> <span data-i18n="tourism_cusco_text">La antigua capital del Imperio Inca, llena de historia y arquitectura colonial.</span></li>
+                <li><strong data-i18n="tourism_lake_titicaca_strong">Lago Titicaca:</strong> <span data-i18n="tourism_lake_titicaca_text">El lago navegable más alto del mundo, hogar de las islas flotantes de Uros.</span></li>
+                <li><strong data-i18n="tourism_lima_strong">Lima:</strong> <span data-i18n="tourism_lima_text">La capital gastronómica de Sudamérica, con una rica historia y vida nocturna animada.</span></li>
+                <li><strong data-i18n="tourism_arequipa_strong">Arequipa:</strong> <span data-i18n="tourism_arequipa_text">La "Ciudad Blanca", famosa por su arquitectura de sillar y el majestuoso Cañón del Colca.</span></li>
+                <li><strong data-i18n="tourism_nazca_lines_strong">Líneas de Nazca:</strong> <span data-i18n="tourism_nazca_lines_text">Enigmáticos geoglifos dibujados en el desierto, visibles solo desde arriba.</span></li>
+                <li><strong data-i18n="tourism_sacred_valley_strong">Valle Sagrado de los Incas:</strong> <span data-i18n="tourism_sacred_valley_text">Un valle fértil entre Cusco y Machu Picchu, con sitios arqueológicos y pueblos tradicionales.</span></li>
             </ul>
 
-            <h3>Galeria de Imagens</h3>
-            <p>Inspire-se com algumas das belezas do Peru:</p>
+            <h3 data-i18n="tourism_gallery_title">Galería de Imágenes</h3>
+            <p data-i18n="tourism_gallery_text">Inspírate con algunas de las bellezas de Perú:</p>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="imagens/machupicchu.webp" alt="Machu Picchu">
-                    <div class="overlay">Machu Picchu</div>
+                    <div class="overlay" data-i18n="gallery_machu_picchu">Machu Picchu</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagens/cusco.jpg" alt="Cusco">
-                    <div class="overlay">Cusco</div>
+                    <div class="overlay" data-i18n="gallery_cusco">Cusco</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagens/lagotiticaca.jpg" alt="Lago Titicaca">
-                    <div class="overlay">Lago Titicaca</div>
+                    <div class="overlay" data-i18n="gallery_lake_titicaca">Lago Titicaca</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagens/lima.jpg" alt="Lima">
-                    <div class="overlay">Lima</div>
+                    <div class="overlay" data-i18n="gallery_lima">Lima</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagens/Arequipa.jpg" alt="Arequipa">
-                    <div class="overlay">Arequipa</div>
+                    <div class="overlay" data-i18n="gallery_arequipa">Arequipa</div>
                 </div>
                 <div class="gallery-item">
                     <img src="imagens/Linhas de Nazca.webp" alt="Linhas de Nazca">
-                    <div class="overlay">Linhas de Nazca</div>
+                    <div class="overlay" data-i18n="gallery_nazca_lines">Líneas de Nazca</div>
                 </div>
             </div>
         </div>
@@ -115,7 +122,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 EvoTech. Todos os direitos reservados.</p>
+            <p data-i18n="footer_copyright">&copy; 2025 EvoTech. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/useevotech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     aria-label="Instagram" target="_blank" rel="noopener noreferrer">
@@ -124,7 +131,7 @@
             </div>
             <!-- Placeholder para feed do Instagram -->
             <div class="instagram-feed">
-                <h4>#VisitEvoTech no Instagram</h4>
+                <h4 data-i18n="instagram_feed_title">#VisitEvoTech en Instagram</h4>
             </div>
         </div>
     </footer>
