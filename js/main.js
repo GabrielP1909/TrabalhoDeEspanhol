@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setting_increase_font: 'Aumentar Fonte',
             setting_high_contrast: 'Alto Contraste',
             setting_mute_sounds: 'Silenciar Sons',
-            setting_peru_language: 'Idioma es-PE', // Rótulo atualizado no dicionário
+            setting_portuguese_language: 'Traduzir para Português (BR)', // Novo rótulo para português
             // Página Inicial (index.html)
             hero_title: 'Conheça o Peru',
             hero_subtitle: 'Um país rico em história, cultura e belezas naturais.',
@@ -172,6 +172,23 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery_lima: 'Lima',
             gallery_arequipa: 'Arequipa',
             gallery_nazca_lines: 'Linhas de Nazca',
+            // Sobre (sobre.html)
+            about_intro_title: 'Descobrindo o Peru: Uma Nação Milenar',
+            about_intro_text: 'O Peru é um país de contrastes e maravilhas, onde a história antiga se encontra com a modernidade, e a diversidade geográfica se reflete em sua rica cultura. Conheça mais sobre esta nação andina fascinante.',
+            about_history_title: 'História e Legado Inca',
+            about_history_text1: 'A história do Peru é profundamente marcada pela civilização Inca, que construiu um império vasto e sofisticado nos Andes. Sua capital, Cusco, e a impressionante cidade de Machu Picchu são testemunhos de um conhecimento avançado em arquitetura, engenharia e organização social.',
+            about_history_text2: 'Antes dos Incas, diversas culturas pré-colombianas floresceram na região, como os Moche, Nazca, Chimú e Wari, deixando um legado de arte, cerâmica e sistemas de irrigação que ainda hoje impressionam.',
+            about_geography_title: 'Geografia Diversa',
+            about_geography_text: 'O Peru é um dos poucos países que abrigam três regiões geográficas distintas: a costa árida, a imponente Cordilheira dos Andes e a vasta e exuberante Floresta Amazônica. Essa diversidade proporciona paisagens deslumbrantes, desde desertos e praias a montanhas nevadas e selvas densas, abrigando uma biodiversidade única no planeta.',
+            about_coast_overlay: 'Costa Peruana',
+            about_andes_overlay: 'Andes Peruanos',
+            about_amazon_overlay: 'Amazônia Peruana',
+            about_people_culture_title: 'Povo e Cultura',
+            about_people_culture_text1: 'A população peruana é um caldeirão de etnias, resultado da fusão entre os povos indígenas, descendentes de europeus, africanos e asiáticos. Essa miscigenação se manifesta em uma cultura vibrante, expressa na culinária, música, dança, artesanato e nas festividades que celebram tanto as tradições ancestrais quanto as influências coloniais.',
+            about_people_culture_text2: 'O respeito às tradições e a hospitalidade são características marcantes do povo peruano, que se orgulha de sua herança e compartilha com o mundo a riqueza de sua identidade.',
+            about_peru_today_title: 'O Peru Hoje',
+            about_peru_today_text1: 'Atualmente, o Peru é uma nação em desenvolvimento, com uma economia crescente impulsionada pela mineração, agricultura, pesca e, cada vez mais, pelo turismo. Lima, sua capital, é um centro urbano moderno e vibrante, reconhecido como um dos principais polos gastronômicos do mundo.',
+            about_peru_today_text2: 'O país continua a investir na preservação de seu patrimônio cultural e natural, buscando um equilíbrio entre o progresso e a manutenção de suas raízes milenares.',
         },
         'es-PE': { // "Linguagem do Peru" - usando espanhol peruano como exemplo
             // Navegação
@@ -189,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setting_increase_font: 'Aumentar Fuente',
             setting_high_contrast: 'Alto Contraste',
             setting_mute_sounds: 'Silenciar Sonidos',
-            setting_peru_language: 'Idioma es-PE', // Rótulo atualizado no dicionário
+            setting_portuguese_language: 'Traducir a Portugués (BR)', // Novo rótulo para português
             // Página Inicial (index.html)
             hero_title: 'Conoce Perú',
             hero_subtitle: 'Un país rico en historia, cultura y bellezas naturales.',
@@ -340,6 +357,23 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery_lima: 'Lima',
             gallery_arequipa: 'Arequipa',
             gallery_nazca_lines: 'Líneas de Nazca',
+            // Sobre (sobre.html)
+            about_intro_title: 'Descubriendo Perú: Una Nación Milenaria',
+            about_intro_text: 'Perú es un país de contrastes y maravillas, donde la historia antigua se encuentra con la modernidad, y la diversidad geográfica se refleja en su rica cultura. Conoce más sobre esta nación andina fascinante.',
+            about_history_title: 'Historia y Legado Inca',
+            about_history_text1: 'La historia de Perú está profundamente marcada por la civilización Inca, que construyó un imperio vasto y sofisticado en los Andes. Su capital, Cusco, y la impresionante ciudad de Machu Picchu son testimonios de un conocimiento avanzado en arquitectura, ingeniería y organización social.',
+            about_history_text2: 'Antes de los Incas, diversas culturas precolombinas florecieron en la región, como los Moche, Nazca, Chimú y Wari, dejando un legado de arte, cerámica y sistemas de irrigación que aún hoy impresionan.',
+            about_geography_title: 'Geografía Diversa',
+            about_geography_text: 'Perú es uno de los pocos países que albergan tres regiones geográficas distintas: la costa árida, la imponente Cordillera de los Andes y la vasta y exuberante Selva Amazónica. Esta diversidad proporciona paisajes deslumbrantes, desde desiertos y playas hasta montañas nevadas y selvas densas, albergando una biodiversidad única en el planeta.',
+            about_coast_overlay: 'Costa Peruana',
+            about_andes_overlay: 'Andes Peruanos',
+            about_amazon_overlay: 'Amazonía Peruana',
+            about_people_culture_title: 'Pueblo y Cultura',
+            about_people_culture_text1: 'La población peruana es un crisol de etnias, resultado de la fusión entre los pueblos indígenas, descendientes de europeos, africanos y asiáticos. Esta mezcla se manifiesta en una cultura vibrante, expresada en la culinaria, música, danza, artesanía y en las festividades que celebran tanto las tradiciones ancestrales como las influencias coloniales.',
+            about_people_culture_text2: 'El respeto a las tradiciones y la hospitalidad son características destacadas del pueblo peruano, que se enorgullece de su herencia y comparte con el mundo la riqueza de su identidad.',
+            about_peru_today_title: 'Perú Hoy',
+            about_peru_today_text1: 'Actualmente, Perú es una nación en desarrollo, con una economía creciente impulsada por la minería, agricultura, pesca y, cada vez más, por el turismo. Lima, su capital, es un centro urbano moderno y vibrante, reconocido como uno de los principales polos gastronómicos del mundo.',
+            about_peru_today_text2: 'El país continúa invirtiendo en la preservación de su patrimonio cultural y natural, buscando un equilibrio entre el progreso y el mantenimiento de sus raíces milenarias.',
         }
     };
 
@@ -378,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     titleKey = 'hero_title';
                     break;
                 case 'sobre.html':
-                    titleKey = 'nav_about';
+                    titleKey = 'about_intro_title'; // Usar a chave de tradução do título da seção
                     break;
                 case 'turismo.html':
                     titleKey = 'tourism_intro_title';
@@ -400,6 +434,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 pageTitleElement.textContent = translations[lang][titleKey];
             }
         }
+        // Atualizar o atributo lang da tag <html>
+        document.documentElement.lang = lang;
     }
 
     // Navbar scroll effect
@@ -519,25 +555,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- NOVA FUNCIONALIDADE: IDIOMA DO SITE ---
-    const peruLanguageToggleMenu = document.getElementById('peru-language-toggle-menu');
-    if (peruLanguageToggleMenu) {
-        const currentLanguage = localStorage.getItem('language') || 'pt-BR';
-        if (currentLanguage === 'es-PE') {
-            peruLanguageToggleMenu.checked = true;
+    const portugueseLanguageToggleMenu = document.getElementById('portuguese-language-toggle-menu'); // ID atualizado
+    if (portugueseLanguageToggleMenu) {
+        const currentLanguage = localStorage.getItem('language') || 'es-PE'; // Padrão agora é es-PE
+        if (currentLanguage === 'pt-BR') {
+            portugueseLanguageToggleMenu.checked = true;
         }
         // Aplicar o idioma salvo ou o padrão ao carregar a página
         applyLanguage(currentLanguage);
 
-        peruLanguageToggleMenu.addEventListener('change', () => {
-            if (peruLanguageToggleMenu.checked) {
-                localStorage.setItem('language', 'es-PE');
-                applyLanguage('es-PE');
-            } else {
+        portugueseLanguageToggleMenu.addEventListener('change', () => {
+            if (portugueseLanguageToggleMenu.checked) {
                 localStorage.setItem('language', 'pt-BR');
                 applyLanguage('pt-BR');
+            } else {
+                localStorage.setItem('language', 'es-PE');
+                applyLanguage('es-PE');
             }
         });
+    } else {
+        // Se o toggle não existir (ex: em páginas que não têm o menu de configurações),
+        // ainda assim aplicar o idioma salvo ou o padrão.
+        const currentLanguage = localStorage.getItem('language') || 'es-PE';
+        applyLanguage(currentLanguage);
     }
+
 
     // 6. Scroll Reveal Animation
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
