@@ -72,20 +72,24 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <!-- Vídeo de fundo -->
-        <video autoplay muted loop class="hero-video">
-            <source src="https://videos.pexels.com/video-files/29604765/12740971_2560_1440_30fps.mp4" type="video/mp4">
-            <!-- Adicione outros formatos de vídeo para compatibilidade -->
-            Seu navegador não suporta vídeos HTML5.
-        </video>
-        <div class="hero-overlay"></div> <!-- Overlay escuro -->
-        <div class="hero-content">
-            <h1 data-i18n="hero_title">Conoce Perú</h1>
-            <p data-i18n="hero_subtitle">Un país rico en historia, cultura y bellezas naturales.</p>
-            <a href="sobre.html" class="btn" data-i18n="hero_button">Saber Más</a>
-        </div>
-    </section>
+  <section class="hero">
+  <!-- Vídeo de fundo -->
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="videos/video2.mp4" type="video/mp4">
+    <source src="videos/video2.webm" type="video/webm">
+    <!-- Fallback para navegadores sem suporte a vídeo -->
+    <img src="images/fallback.jpg" alt="Conoce Perú">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+
+  <div class="hero-overlay"></div> <!-- Overlay escuro -->
+  
+  <div class="hero-content">
+    <h1 data-i18n="hero_title">Conoce Perú</h1>
+    <p data-i18n="hero_subtitle">Un país rico en historia, cultura y bellezas naturales.</p>
+    <a href="sobre.html" class="btn" data-i18n="hero_button">Saber Más</a>
+  </div>
+</section>
 
     <section class="highlights scroll-reveal">
         <div class="container">
