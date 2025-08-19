@@ -1,7 +1,7 @@
 /* Estilos específicos para a página de Turismo */
 
 .turismo-intro {
-    padding: 140px 0 80px;
+    padding: clamp(80px, 15vw, 140px) 0 clamp(40px, 10vw, 80px);
     background: var(--gradient-primary);
     color: white;
     text-align: center;
@@ -12,20 +12,20 @@
 
 .turismo-intro h2 {
     color: white;
-    font-size: 4em;
-    margin-bottom: 25px;
+    font-size: clamp(2.8em, 8vw, 4em);
+    margin-bottom: clamp(15px, 4vw, 25px);
     text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
 .turismo-intro p {
     color: rgba(255, 255, 255, 0.95);
-    font-size: 1.5em;
+    font-size: clamp(1.2em, 3vw, 1.5em);
     max-width: 900px;
     margin: 0 auto;
 }
 
 .turismo-content {
-    padding: 80px 0;
+    padding: clamp(50px, 10vw, 80px) 0;
     max-width: 1000px;
     margin: 0 auto 40px;
     background-color: var(--section-bg); /* Usar variável */
@@ -36,33 +36,33 @@
 
 .turismo-content h3 {
     color: var(--primary-color);
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size: 3em;
+    margin-top: clamp(30px, 8vw, 50px);
+    margin-bottom: clamp(20px, 5vw, 30px);
+    font-size: clamp(2.2em, 7vw, 3em);
     border-bottom: 3px solid var(--accent-color);
     padding-bottom: 15px;
 }
 
 .turismo-content p {
-    font-size: 1.15em;
+    font-size: clamp(1em, 2.5vw, 1.15em);
     color: var(--light-text-color); /* Usar variável */
-    margin-bottom: 25px;
+    margin-bottom: clamp(15px, 4vw, 25px);
 }
 
 /* Destination List */
 .destination-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 50px; /* Mais espaçamento */
+    margin-bottom: clamp(30px, 8vw, 50px); /* Mais espaçamento */
 }
 
 .destination-list li {
     background-color: var(--body-bg); /* Usar variável */
     border: 1px solid var(--border-color);
-    margin-bottom: 15px; /* Mais espaçamento */
-    padding: 20px 30px; /* Mais padding */
+    margin-bottom: clamp(10px, 2vw, 15px); /* Mais espaçamento */
+    padding: clamp(15px, 4vw, 20px) clamp(20px, 5vw, 30px); /* Mais padding */
     border-radius: 8px;
-    font-size: 1.2em; /* Maior */
+    font-size: clamp(1.1em, 2.8vw, 1.2em); /* Maior */
     color: var(--text-color); /* Usar variável */
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s ease; /* Transição para modo claro/escuro */
     display: flex;
@@ -94,10 +94,10 @@ body.high-contrast .destination-list li:hover {
 /* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards maiores */
-    gap: 30px; /* Mais espaçamento */
-    margin-top: 40px;
-    padding: 20px; /* Mais padding */
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 80vw, 300px), 1fr)); /* Cards maiores */
+    gap: clamp(15px, 4vw, 30px); /* Mais espaçamento */
+    margin-top: clamp(20px, 5vw, 40px);
+    padding: clamp(10px, 3vw, 20px); /* Mais padding */
     justify-items: center;
     align-items: center;
     background-color: var(--body-bg); /* Usar variável */
@@ -109,7 +109,7 @@ body.high-contrast .destination-list li:hover {
 .gallery-item {
     position: relative;
     width: 100%;
-    height: 220px; /* Altura maior */
+    height: clamp(180px, 30vw, 220px); /* Altura maior */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 6px 20px var(--shadow-light); /* Sombra mais forte */
@@ -151,8 +151,8 @@ body.high-contrast .gallery-item:hover img {
     width: 100%;
     background: rgba(0, 0, 0, 0.75); /* Mais opaco */
     color: white;
-    padding: 15px; /* Mais padding */
-    font-size: 1.2em; /* Maior */
+    padding: clamp(10px, 2.5vw, 15px); /* Mais padding */
+    font-size: clamp(1em, 2.5vw, 1.2em); /* Maior */
     text-align: center;
     transform: translateY(100%);
     transition: transform 0.3s ease;
@@ -169,13 +169,13 @@ body.high-contrast .gallery-item .overlay {
 
 /* Estilos para Galeria 360 */
 .gallery-360 {
-    margin-top: 50px;
+    margin-top: clamp(30px, 8vw, 50px);
     text-align: center;
 }
 
 .gallery-360 .viewer-container {
     width: 100%;
-    height: 400px; /* Altura do visualizador 360 */
+    height: clamp(250px, 50vw, 400px); /* Altura do visualizador 360 */
     background-color: #f0f0f0;
     border-radius: 10px;
     overflow: hidden;
@@ -190,17 +190,17 @@ body.high-contrast .gallery-item .overlay {
 
 @media (max-width: 768px) {
     .turismo-intro h2 {
-        font-size: 3.2em;
+        font-size: 2.8em;
     }
     .turismo-intro p {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     .turismo-content h3 {
-        font-size: 2.5em;
+        font-size: 2.2em;
     }
     .destination-list li {
-        font-size: 1.1em;
-        padding: 18px 25px;
+        font-size: 1em;
+        padding: 15px 20px;
     }
     .gallery {
         grid-template-columns: 1fr;

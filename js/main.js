@@ -642,4 +642,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. Galeria 360° (Placeholder) - Não implementado no escopo atual
     // 10. Mapa Turístico Interativo (Placeholder) - Não implementado no escopo atual
+
+    // Função para ajustar o padding-top do body dinamicamente
+    function adjustBodyPadding() {
+        const navbarHeight = navbar.offsetHeight;
+        body.style.paddingTop = `${navbarHeight}px`;
+    }
+
+    // Chamar a função ao carregar a página e ao redimensionar
+    adjustBodyPadding();
+    window.addEventListener('resize', adjustBodyPadding);
 });

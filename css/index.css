@@ -3,10 +3,10 @@
 /* Highlights Section */
 .highlights {
     background-color: var(--body-bg); /* Usar variável */
-    padding: 100px 0; /* Mais padding */
+    padding: clamp(50px, 10vw, 100px) 0; /* Mais padding */
     text-align: center;
     /* Ajuste principal: margin-top negativo para sobrepor a seção hero */
-    margin-top: -150px; /* Ajuste este valor conforme a altura desejada da sobreposição */
+    margin-top: clamp(-100px, -20vh, -150px); /* Ajuste este valor conforme a altura desejada da sobreposição */
     position: relative; /* Necessário para z-index */
     z-index: 1; /* Garante que esta seção fique acima do hero-overlay */
     /* REMOVIDO: border-top-left-radius e border-top-right-radius */
@@ -14,14 +14,14 @@
 }
 
 .highlights h2 {
-    margin-bottom: 60px; /* Mais espaçamento */
+    margin-bottom: clamp(30px, 8vw, 60px); /* Mais espaçamento */
     color: var(--text-color); /* Usar variável */
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards um pouco maiores */
-    gap: 40px; /* Mais espaçamento entre cards */
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 80vw, 300px), 1fr)); /* Cards um pouco maiores */
+    gap: clamp(20px, 5vw, 40px); /* Mais espaçamento entre cards */
     justify-content: center;
     align-items: stretch;
 }
@@ -45,7 +45,7 @@
 
 .card img {
     width: 100%;
-    height: 220px; /* Altura da imagem um pouco maior */
+    height: clamp(180px, 30vw, 220px); /* Altura da imagem um pouco maior */
     object-fit: cover;
     border-bottom: 1px solid var(--card-border); /* Usar variável */
     transition: transform 0.3s ease; /* Efeito na imagem */
@@ -56,15 +56,15 @@
 }
 
 .card h3 {
-    font-size: 1.8em; /* Maior */
-    margin: 25px 25px 15px; /* Mais padding */
+    font-size: clamp(1.5em, 4vw, 1.8em); /* Maior */
+    margin: clamp(15px, 4vw, 25px); /* Mais padding */
     color: var(--primary-color);
 }
 
 .card p {
-    font-size: 1.05em;
+    font-size: clamp(0.95em, 2.2vw, 1.05em);
     color: var(--light-text-color); /* Usar variável */
-    padding: 0 25px;
+    padding: 0 clamp(15px, 4vw, 25px);
     flex-grow: 1;
 }
 
@@ -72,11 +72,11 @@
     display: inline-block;
     background-color: var(--accent-color); /* Botão com cor de destaque */
     color: var(--dark-text); /* Texto escuro no botão dourado */
-    padding: 10px 20px; /* Aumentado */
+    padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px); /* Aumentado */
     border-radius: 6px; /* Mais arredondado */
     font-weight: 700;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    margin: 25px; /* Mais padding */
+    margin: clamp(15px, 4vw, 25px); /* Mais padding */
     align-self: flex-start;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -103,24 +103,6 @@ body.high-contrast .btn-card:hover {
         grid-template-columns: 1fr;
     }
     .highlights {
-        margin-top: -80px; /* Ajuste para telas menores */
+        margin-top: clamp(-50px, -10vh, -80px); /* Ajuste para telas menores */
     }
-}
-
-
-
-/* Ajustes para o footer para que ele se encaixe perfeitamente */
-footer {
-    margin-top: 0; /* Remove o margin-top padrão do footer */
-    position: relative;
-    z-index: 1; /* Garante que o footer esteja acima do separador */
-}
-
-/* Ajustes para o modo escuro */
-body.dark-mode .section-separator::before {
-    background-color: var(--body-bg); /* Usar background-color para transição */
-}
-
-body.dark-mode .section-separator::after {
-    background-color: var(--footer-bg); /* Usar background-color para transição */
 }
